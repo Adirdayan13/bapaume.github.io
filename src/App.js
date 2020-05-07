@@ -9,6 +9,7 @@ import LesBastionCarousel from "./carousels/LesBastionCarousel";
 import LesTaupesCarousel from "./carousels/LesTaupesCarousel";
 import VisiteCarousel from "./carousels/VisiteCarousel";
 import MedievalCarousel from "./carousels/MedievalCarousel";
+import LesTaupesCarousel from "./carousels/LesTaupesCarousel";
 import NavbarHeader from "./navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
