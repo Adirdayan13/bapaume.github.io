@@ -127,7 +127,7 @@ export default class App extends React.Component {
                   <h1>Les taupes</h1>
                   <Link to="gallery" duration={1000} offset={-50}>
                     <img
-                      src="/pictures/les taupes en recherche.JPG"
+                      src="https://i.ibb.co/RNSCWjX/les-taupes-en-recherche.jpg"
                       className="gallery-pic"
                       alt="gallery"
                       onClick={() => this.lesTaupes()}
