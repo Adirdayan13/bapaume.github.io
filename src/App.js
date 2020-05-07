@@ -48,9 +48,15 @@ export default class App extends React.Component {
           <Welcome />
         </section>
         <section id="intro">
+          <br />
+          <h1>À PROPOS</h1>
+          <br />
           <Intro />
         </section>
         <section id="gallery">
+          <br />
+          <h1>GALLERY</h1>
+          <br />
           <div
             data-aos="zoom-in"
             data-aos-duration="1500"
@@ -219,6 +225,9 @@ export default class App extends React.Component {
         </section>
 
         <section id="video">
+          <br />
+          <h1>VIDEO</h1>
+          <br />
           <div
             data-aos="zoom-in-up"
             data-aos-duration="2000"

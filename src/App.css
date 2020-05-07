@@ -10,7 +10,6 @@ body {
 section {
   min-height: 100vh;
   max-width: 100%;
-  border-bottom: 1px solid;
   background: #f1faee;
 }
 
