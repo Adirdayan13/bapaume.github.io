@@ -127,7 +127,7 @@ export default class App extends React.Component {
                   <h1>Les taupes</h1>
                   <Link to="gallery" duration={1000} offset={-50}>
                     <img
-                      src="https://i.ibb.co/RNSCWjX/les-taupes-en-recherche.jpg"
+                      src="https://i.ibb.co/RNSCWjX/les-taupes-en-recherche.jpgLesBastionCarousel"
                       className="gallery-pic"
                       alt="gallery"
                       onClick={() => this.lesTaupes()}
@@ -196,7 +196,7 @@ export default class App extends React.Component {
                 />
               </div>
               <h1>LES BOVES</h1>
-              <LesBastionCarousel />
+              <LesBovesCarousel />
             </>
           )}
           {this.state.medieval && (
