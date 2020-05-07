@@ -56,7 +56,7 @@ export default class LesBovesCarousel extends Component {
           <div className="slider-div">
             <img
               alt="carousel"
-              src="https://i.ibb.co/ZWYn4r1/038.jpg"
+              src="https://i.ibb.co/Fb6pjvX/038.jpg"
               className="carousel-img"
             />
             <h1>NONAME</h1>
@@ -64,7 +64,7 @@ export default class LesBovesCarousel extends Component {
           <div className="slider-div">
             <img
               alt="carousel"
-              src="https://i.ibb.co/ZWYn4r1/039.jpg"
+              src="https://i.ibb.co/GRZdKmY/039.jpg"
               className="carousel-img"
             />
             <h1>NONAME</h1>
@@ -72,7 +72,7 @@ export default class LesBovesCarousel extends Component {
           <div className="slider-div">
             <img
               alt="carousel"
-              src="https://i.ibb.co/ZWYn4r1/040.jpg"
+              src="https://i.ibb.co/CwKBKTR/040.jpg"
               className="carousel-img"
             />
             <h1>NONAME</h1>
@@ -80,7 +80,7 @@ export default class LesBovesCarousel extends Component {
           <div className="slider-div">
             <img
               alt="carousel"
-              src="https://i.ibb.co/ZWYn4r1/045.jpg"
+              src="https://i.ibb.co/2dMB1c7/045.jpg"
               className="carousel-img"
             />
             <h1>NONAME</h1>
@@ -88,7 +88,7 @@ export default class LesBovesCarousel extends Component {
           <div className="slider-div">
             <img
               alt="carousel"
-              src="https://i.ibb.co/ZWYn4r1/047.jpg"
+              src="https://i.ibb.co/zmGhK39/047.jpg"
               className="carousel-img"
             />
             <h1>NONAME</h1>
@@ -96,7 +96,7 @@ export default class LesBovesCarousel extends Component {
           <div className="slider-div">
             <img
               alt="carousel"
-              src="https://i.ibb.co/ZWYn4r1/048.jpg"
+              src="https://i.ibb.co/KL1c32g/048.jpg"
               className="carousel-img"
             />
             <h1>NONAME</h1>
