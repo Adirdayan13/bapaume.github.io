@@ -15,6 +15,11 @@ class Map extends React.Component {
     };
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log("submit");
+  }
+
   componentDidMount() {
     const map = new mapboxgl.Map({
       container: this.mapContainer,
@@ -42,6 +47,7 @@ class Map extends React.Component {
   render() {
     return (
       <>
+        <br />
         <h1 className="section-title">Our location:</h1>
         <br />
 
@@ -50,19 +56,26 @@ class Map extends React.Component {
         <br />
         <h1>Keep in touch</h1>
         <br />
-        <form>
+
+        <form
+          action="https://formspree.io/adirdayan@gmail"
+          method="POST"
+          onSubmit={this.handleSubmit}
+        >
           <div className="form-group">
             <label htmlFor="fullName">Full Name</label>
             <input
               type="text"
               className="form-control"
               id="fullName"
+              name="name"
               placeholder="Enter your full name"
             />
           </div>
           <div className="form-group">
             <label htmlFor="emailForm">Email address</label>
             <input
+              name="email"
               type="email"
               className="form-control"
               id="emailForm"

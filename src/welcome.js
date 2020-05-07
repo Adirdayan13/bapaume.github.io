@@ -17,11 +17,13 @@ function Welcome() {
           bapalmoise.
         </h1>
         <br />
-        <img
-          alt="welcome"
-          className="welcome-img"
-          src="/pictures/les-Taupes.JPG"
-        />
+        <div className="welcome-img-wrapper">
+          <img
+            alt="welcome"
+            className="welcome-img"
+            src="/pictures/les-Taupes.JPG"
+          />
+        </div>
       </div>
     </>
   );
