@@ -95,7 +95,7 @@ export default class App extends React.Component {
                   <h1>Medieval</h1>
                   <Link to="gallery" duration={1000} offset={-50}>
                     <img
-                      src="/pictures/Medieval la societe archeologique.JPG"
+                      src="https://i.ibb.co/LkZBC9V/Medieval-la-societe-archeologique.jpg"
                       className="gallery-pic"
                       alt="gallery"
                       onClick={() =>
@@ -111,7 +111,7 @@ export default class App extends React.Component {
                   <h1>Visite</h1>
                   <Link to="gallery" duration={1000} offset={-50}>
                     <img
-                      src="/pictures/visite explication de la citerne.jpg"
+                      src="https://i.ibb.co/LkXfGmC/visite-explication-de-la-citerne.jpg"
                       className="gallery-pic"
                       alt="gallery"
                       onClick={() =>
