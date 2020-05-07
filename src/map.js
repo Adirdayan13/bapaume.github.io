@@ -43,7 +43,7 @@ class Map extends React.Component {
     return (
       <>
         <br />
-        <h1>Our location:</h1>
+        <h1 className="section-title">Our location:</h1>
         <br />
         <div ref={el => (this.mapContainer = el)} className="mapContainer" />
         <br />

@@ -49,13 +49,12 @@ export default class App extends React.Component {
         </section>
         <section id="intro">
           <br />
-          <h1>À PROPOS</h1>
+          <h1 className="section-title">À PROPOS</h1>
           <br />
           <Intro />
         </section>
         <section id="gallery">
-          <br />
-          <h1>GALLERY</h1>
+          <h1 className="section-title">GALLERY</h1>
           <br />
           <div
             data-aos="zoom-in"
@@ -226,7 +225,7 @@ export default class App extends React.Component {
 
         <section id="video">
           <br />
-          <h1>VIDEO</h1>
+          <h1 className="section-title">VIDEO</h1>
           <br />
           <div
             data-aos="zoom-in-up"
