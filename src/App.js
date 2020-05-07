@@ -54,6 +54,7 @@ export default class App extends React.Component {
           <Intro />
         </section>
         <section id="gallery">
+          <br />
           <h1 className="section-title">GALLERY</h1>
           <br />
           <div
