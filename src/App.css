@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   overflow-x: hidden;
+  height: auto;
 }
 
 body {
@@ -242,21 +243,19 @@ h1 {
 
 .map-div {
   max-width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.mapContainer-wrapper {
+  width: 70%;
+}
 
 .mapContainer {
-  /* position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0; */
-  width: 70%;
-  height: 50vh;
+  width: 80%;
+  height: 300px;
   max-width: 100%;
   max-height: 100vh;
 }
@@ -293,6 +292,7 @@ textarea {
 
 #video {
   text-align: center;
+  /* padding-bottom: 20%; */
 }
 
 /* .slick-arrow {
@@ -344,13 +344,16 @@ textarea {
   .gallery-wrapper {
     padding-top: 5%;
   }
-  .mapContainer,
   textarea,
   iframe {
     width: 98%;
   }
   #gallery {
     padding-top: 30%;
+  }
+  .mapContainer {
+    width: 98%;
+    height: 30vh;
   }
 }
 
