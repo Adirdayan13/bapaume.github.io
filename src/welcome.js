@@ -21,7 +21,7 @@ function Welcome() {
           <img
             alt="welcome"
             className="welcome-img"
-            src="/pictures/les-Taupes.JPG"
+            src="https://i.ibb.co/rZYFCZp/les-Taupes-crop.jpg"
           />
         </div>
       </div>

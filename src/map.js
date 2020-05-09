@@ -40,7 +40,7 @@ class Map extends React.Component {
 
     new mapboxgl.Popup({ closeOnClick: false })
       .setLngLat([2.847394, 50.100872])
-      .setHTML("<p>Crazy tunnels of bapaume</p>")
+      .setHTML("<p>Underground tunnels of bapaume</p>")
       .addTo(map);
   }
 

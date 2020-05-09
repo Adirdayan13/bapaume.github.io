@@ -48,10 +48,26 @@ export default class LesTaupesCarousel extends Component {
           <div className="slider-div">
             <img
               alt="carousel"
+              src="https://i.ibb.co/nqyr63Q/Les-taupes-en-recherche.jpg"
+              className="carousel-img"
+            />
+            <h1>En recherche</h1>
+          </div>
+          <div className="slider-div">
+            <img
+              alt="carousel"
               src="https://i.ibb.co/Qn0nG08/Les-taupes-chantier-exterieur.jpg"
               className="carousel-img"
             />
             <h1>Chantier exterieur</h1>
+          </div>
+          <div className="slider-div">
+            <img
+              alt="carousel"
+              src="https://i.ibb.co/9wS31qK/Les-taupes-avec-les-jeunes-recrues.jpg"
+              className="carousel-img"
+            />
+            <h1>Avec les jeunes recrues</h1>
           </div>
           <div className="slider-div">
             <img
@@ -68,6 +84,14 @@ export default class LesTaupesCarousel extends Component {
               className="carousel-img"
             />
             <h1>Les guides</h1>
+          </div>
+          <div className="slider-div">
+            <img
+              alt="carousel"
+              src="https://i.ibb.co/rZYFCZp/les-Taupes-crop.jpg"
+              className="carousel-img"
+            />
+            <h1>DESCRIPTION</h1>
           </div>
         </Slider>
       </div>

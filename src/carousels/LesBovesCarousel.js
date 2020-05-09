@@ -40,7 +40,7 @@ export default class LesBovesCarousel extends Component {
           <div className="slider-div">
             <img
               alt="carousel"
-              src="https://i.ibb.co/HpwLYzt/011.jpg"
+              src="/pictures/image17.jpg"
               className="carousel-img"
             />
             <h1>NONAME</h1>
@@ -48,10 +48,18 @@ export default class LesBovesCarousel extends Component {
           <div className="slider-div">
             <img
               alt="carousel"
-              src="https://i.ibb.co/ZWYn4r1/037.jpg"
+              src="https://i.ibb.co/GRZdKmY/039.jpg"
               className="carousel-img"
             />
-            <h1>NONAME</h1>
+            <h1>Graffitis de solats</h1>
+          </div>
+          <div className="slider-div">
+            <img
+              alt="carousel"
+              src="https://i.ibb.co/CwKBKTR/040.jpg"
+              className="carousel-img"
+            />
+            <h1>Graffitis de solats</h1>
           </div>
           <div className="slider-div">
             <img
@@ -64,23 +72,7 @@ export default class LesBovesCarousel extends Component {
           <div className="slider-div">
             <img
               alt="carousel"
-              src="https://i.ibb.co/GRZdKmY/039.jpg"
-              className="carousel-img"
-            />
-            <h1>NONAME</h1>
-          </div>
-          <div className="slider-div">
-            <img
-              alt="carousel"
-              src="https://i.ibb.co/CwKBKTR/040.jpg"
-              className="carousel-img"
-            />
-            <h1>NONAME</h1>
-          </div>
-          <div className="slider-div">
-            <img
-              alt="carousel"
-              src="https://i.ibb.co/2dMB1c7/045.jpg"
+              src="https://i.ibb.co/HpwLYzt/011.jpg"
               className="carousel-img"
             />
             <h1>NONAME</h1>
@@ -116,6 +108,70 @@ export default class LesBovesCarousel extends Component {
               className="carousel-img"
             />
             <h1>Bastion le bastion du Dauphin</h1>
+          </div>
+          <div className="slider-div">
+            <img
+              alt="carousel"
+              src="https://i.ibb.co/4RCq83t/Entre-e-des-boves.jpg"
+              className="carousel-img"
+            />
+            <h1>Entre e des boves</h1>
+          </div>
+          <div className="slider-div">
+            <img
+              alt="carousel"
+              src="https://i.ibb.co/mRv2wpd/Escalier.jpg"
+              className="carousel-img"
+            />
+            <h1>Escalier</h1>
+          </div>
+          <div className="slider-div">
+            <img
+              alt="carousel"
+              src="https://i.ibb.co/Q99yQMv/Escalier-2.jpg"
+              className="carousel-img"
+            />
+            <h1>Escalier 2</h1>
+          </div>
+          <div className="slider-div">
+            <img
+              alt="carousel"
+              src="https://i.ibb.co/8cGFH15/Escalier-3.jpg"
+              className="carousel-img"
+            />
+            <h1>Escalier 3</h1>
+          </div>
+          <div className="slider-div">
+            <img
+              alt="carousel"
+              src="https://i.ibb.co/3ctjsmF/Les-boves.jpg"
+              className="carousel-img"
+            />
+            <h1>NONAME</h1>
+          </div>
+          <div className="slider-div">
+            <img
+              alt="carousel"
+              src="https://i.ibb.co/y4b89NP/pepere6.jpg"
+              className="carousel-img"
+            />
+            <h1>NONAME</h1>
+          </div>
+          <div className="slider-div">
+            <img
+              alt="carousel"
+              src="https://i.ibb.co/0Qn4t5t/Re-habilitation-des-boves-2.jpg"
+              className="carousel-img"
+            />
+            <h1>Re habilitation des boves</h1>
+          </div>
+          <div className="slider-div">
+            <img
+              alt="carousel"
+              src="https://i.ibb.co/pjbfY24/Re-habilitation-des-boves.jpg"
+              className="carousel-img"
+            />
+            <h1>Re habilitation des boves</h1>
           </div>
         </Slider>
       </div>

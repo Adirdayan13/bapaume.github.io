@@ -13,7 +13,6 @@ import LesBovesCarousel from "./carousels/LesBovesCarousel";
 import NavbarHeader from "./navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { isBrowser } from "react-device-detect";
 
 AOS.init();
 
@@ -63,163 +62,86 @@ export default class App extends React.Component {
               <>
                 <div className="gallery-pic-div">
                   <h1>Les Boves</h1>
-                  {isBrowser ? (
-                    <Link to="gallery" duration={1000} offset={-50}>
-                      <img
-                        onClick={() =>
-                          this.setState({
-                            lesBoves: !this.state.lesBoves,
-                            popup: true
-                          })
-                        }
-                        src="/pictures/image17.jpg"
-                        className="gallery-pic"
-                        alt="gallery"
-                      />
-                    </Link>
-                  ) : (
-                    <Link to="gallery-wrapper" offset={-50}>
-                      <img
-                        onClick={() =>
-                          this.setState({
-                            lesBoves: !this.state.lesBoves,
-                            popup: true
-                          })
-                        }
-                        src="/pictures/image17.jpg"
-                        className="gallery-pic"
-                        alt="gallery"
-                      />
-                    </Link>
-                  )}
+                  <Link to="gallery-wrapper" duration={1000} offset={-80}>
+                    <img
+                      onClick={() =>
+                        this.setState({
+                          lesBoves: !this.state.lesBoves,
+                          popup: true
+                        })
+                      }
+                      src="/pictures/image17.jpg"
+                      className="gallery-pic"
+                      alt="gallery"
+                    />
+                  </Link>
                 </div>
                 <div className="gallery-pic-div">
                   <h1>Les Bastion</h1>
-                  {isBrowser ? (
-                    <Link to="gallery" duration={1000} offset={-50}>
-                      <img
-                        src="/pictures/image10.jpg"
-                        className="gallery-pic"
-                        alt="gallery"
-                        onClick={() =>
-                          this.setState({
-                            lesBastion: !this.state.lesBastion,
-                            popup: true
-                          })
-                        }
-                      />
-                    </Link>
-                  ) : (
-                    <Link to="gallery-wrapper" offset={-50}>
-                      <img
-                        src="/pictures/image10.jpg"
-                        className="gallery-pic"
-                        alt="gallery"
-                        onClick={() =>
-                          this.setState({
-                            lesBastion: !this.state.lesBastion,
-                            popup: true
-                          })
-                        }
-                      />
-                    </Link>
-                  )}
+                  <Link to="gallery-wrapper" duration={1000} offset={-75}>
+                    <img
+                      src="https://i.ibb.co/mTmdbMS/echele-de-secours-en-1940.jpg"
+                      className="gallery-pic"
+                      alt="gallery"
+                      onClick={() =>
+                        this.setState({
+                          lesBastion: !this.state.lesBastion,
+                          popup: true
+                        })
+                      }
+                    />
+                  </Link>
                 </div>
                 <div className="gallery-pic-div">
                   <h1>Medieval</h1>
-                  {isBrowser ? (
-                    <Link to="gallery" duration={1000} offset={-50}>
-                      <img
-                        src="https://i.ibb.co/LkZBC9V/Medieval-la-societe-archeologique.jpg"
-                        className="gallery-pic"
-                        alt="gallery"
-                        onClick={() =>
-                          this.setState({
-                            medieval: !this.state.medieval,
-                            popup: true
-                          })
-                        }
-                      />
-                    </Link>
-                  ) : (
-                    <Link to="gallery-wrapper" offset={-50}>
-                      <img
-                        src="https://i.ibb.co/LkZBC9V/Medieval-la-societe-archeologique.jpg"
-                        className="gallery-pic"
-                        alt="gallery"
-                        onClick={() =>
-                          this.setState({
-                            medieval: !this.state.medieval,
-                            popup: true
-                          })
-                        }
-                      />
-                    </Link>
-                  )}
+
+                  <Link to="gallery-wrapper" duration={1000} offset={-75}>
+                    <img
+                      src="https://i.ibb.co/LkZBC9V/Medieval-la-societe-archeologique.jpg"
+                      className="gallery-pic"
+                      alt="gallery"
+                      onClick={() =>
+                        this.setState({
+                          medieval: !this.state.medieval,
+                          popup: true
+                        })
+                      }
+                    />
+                  </Link>
                 </div>
                 <div className="gallery-pic-div">
                   <h1>Visite</h1>
-                  {isBrowser ? (
-                    <Link to="gallery" duration={1000} offset={-50}>
-                      <img
-                        src="https://i.ibb.co/LkXfGmC/visite-explication-de-la-citerne.jpg"
-                        className="gallery-pic"
-                        alt="gallery"
-                        onClick={() =>
-                          this.setState({
-                            visite: !this.state.visite,
-                            popup: true
-                          })
-                        }
-                      />
-                    </Link>
-                  ) : (
-                    <Link to="gallery-wrapper" offset={-50}>
-                      <img
-                        src="https://i.ibb.co/LkXfGmC/visite-explication-de-la-citerne.jpg"
-                        className="gallery-pic"
-                        alt="gallery"
-                        onClick={() =>
-                          this.setState({
-                            visite: !this.state.visite,
-                            popup: true
-                          })
-                        }
-                      />
-                    </Link>
-                  )}
+
+                  <Link to="gallery-wrapper" duration={1000} offset={-75}>
+                    <img
+                      src="https://i.ibb.co/LkXfGmC/visite-explication-de-la-citerne.jpg"
+                      className="gallery-pic"
+                      alt="gallery"
+                      onClick={() =>
+                        this.setState({
+                          visite: !this.state.visite,
+                          popup: true
+                        })
+                      }
+                    />
+                  </Link>
                 </div>
                 <div className="gallery-pic-div">
                   <h1>Les taupes</h1>
-                  {isBrowser ? (
-                    <Link to="gallery" duration={1000} offset={-50}>
-                      <img
-                        src="https://i.ibb.co/RNSCWjX/les-taupes-en-recherche.jpgLesBastionCarousel"
-                        className="gallery-pic"
-                        alt="gallery"
-                        onClick={() =>
-                          this.setState({
-                            lesTaupes: !this.state.lesTaupes,
-                            popup: true
-                          })
-                        }
-                      />
-                    </Link>
-                  ) : (
-                    <Link to="gallery-wrapper" offset={-75}>
-                      <img
-                        src="https://i.ibb.co/RNSCWjX/les-taupes-en-recherche.jpgLesBastionCarousel"
-                        className="gallery-pic"
-                        alt="gallery"
-                        onClick={() =>
-                          this.setState({
-                            lesTaupes: !this.state.lesTaupes,
-                            popup: true
-                          })
-                        }
-                      />
-                    </Link>
-                  )}
+
+                  <Link to="gallery-wrapper" duration={1000} offset={-75}>
+                    <img
+                      src="https://i.ibb.co/RNSCWjX/les-taupes-en-recherche.jpgLesBastionCarousel"
+                      className="gallery-pic"
+                      alt="gallery"
+                      onClick={() =>
+                        this.setState({
+                          lesTaupes: !this.state.lesTaupes,
+                          popup: true
+                        })
+                      }
+                    />
+                  </Link>
                 </div>
               </>
             )}
@@ -319,11 +241,12 @@ export default class App extends React.Component {
               <br />
               <div className="video">
                 <h1>Visite du baston du Dauphin</h1>
+
                 <iframe
                   title="video"
                   width="100%"
                   height="400"
-                  src="https://www.youtube.com/embed/C1swB1AWk8o"
+                  src="https://www.youtube.com/embed/NoSyssZez3U"
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen

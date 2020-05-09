@@ -9,7 +9,7 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   max-width: 100%;
   background: #f1faee;
 }
@@ -56,7 +56,8 @@ p {
   flex-direction: column;
   align-content: center;
   text-align: center;
-  padding-bottom: 5%;
+  /* height: 100vh; */
+  /* padding-bottom: 50%; */
 }
 
 #welcome p {
@@ -174,7 +175,7 @@ p {
 }
 
 .gallery-pic-div {
-  width: 350px;
+  width: 380px;
   margin: 1%;
 }
 
@@ -213,7 +214,7 @@ h1 {
   box-shadow: 0 8px 6px -6px #000;
   text-align: center;
   outline: none;
-  /* height: 70vh; */
+  height: 75vh;
 }
 
 .slider-div {
@@ -300,7 +301,7 @@ textarea {
 
 .x-div {
   position: absolute;
-  margin-top: 10%;
+  margin-top: 12%;
   right: 7%;
 }
 
@@ -352,15 +353,16 @@ textarea {
   }
   .carousel-img {
     width: 100%;
+    height: 50vh;
   }
   .slick-arrow {
     display: none !important;
   }
   .gallery-wrapper {
-    padding-top: 30%;
+    padding-top: 15%;
   }
   .x-div {
-    padding-top: 40%;
+    padding-top: 25%;
   }
   textarea,
   iframe {
@@ -391,9 +393,11 @@ textarea {
   }
   .welcome-img-wrapper {
     width: 100%;
+    padding-bottom: 30%;
   }
   .welcome-img {
     width: 100%;
+    height: 300px;
   }
   .intro-text-div {
     display: grid;

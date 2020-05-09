@@ -56,6 +56,14 @@ export default class VisiteCarousel extends Component {
           <div className="slider-div">
             <img
               alt="carousel"
+              src="https://i.ibb.co/4tN86Zq/Visite-du-souterrain-2.jpg"
+              className="carousel-img"
+            />
+            <h1>Visite du souterrain</h1>
+          </div>
+          <div className="slider-div">
+            <img
+              alt="carousel"
               src="https://i.ibb.co/Vmzj9FX/Visite-groupe-d-e-le-ves.jpg"
               className="carousel-img"
             />
