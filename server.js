@@ -36,8 +36,8 @@ if (!dev) {
     transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: secrets.user,
-        pass: secrets.pass
+        user: process.env.EMAIL || secrets.EMAIL,
+        pass: process.env.PASSWORD || secrets.PASSWORD
       }
     });
     if (req.body.phone) {
