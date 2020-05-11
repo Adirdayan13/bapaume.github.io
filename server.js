@@ -21,14 +21,6 @@ if (process.env.NODE_ENV === "production") {
   secrets = require("./secrets.json");
 }
 
-transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: secrets.EMAIL,
-    pass: secrets.PASSWORD
-  }
-});
-
 if (!dev) {
   app.disable("x-powered-by");
   app.use(compression());
@@ -41,6 +33,13 @@ if (!dev) {
     if (!req.body.name || !req.body.message || !req.body.email) {
       res.json({ success: false });
     }
+    transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: secrets.user,
+        pass: secrets.pass
+      }
+    });
     if (req.body.phone) {
       mailOptions = {
         from: "adirdayan@gmail.com",
