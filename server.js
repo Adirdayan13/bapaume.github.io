@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 
 const { createServer } = require("http");
 const express = require("express");
@@ -38,9 +38,7 @@ if (!dev) {
   app.use(express.static(path.resolve(__dirname, "build")));
 
   app.post("/send", (req, res) => {
-    console.log("req.body: ", req.body);
     if (!req.body.name || !req.body.message || !req.body.email) {
-      console.log("!req.body.name || !req.body.message || !req.body.email");
       res.json({ success: false });
     }
     if (req.body.phone) {
