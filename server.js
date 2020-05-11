@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 const { createServer } = require("http");
 const express = require("express");
 const compression = require("compression");
@@ -10,15 +8,22 @@ let mailOptions;
 
 const normalizePort = port => parseInt(port, 10);
 const PORT = normalizePort(process.env.PORT || 5000);
-
+let transporter;
 const app = express();
 const dev = app.get("env") !== "production";
+let secrets;
 
-let transporter = nodemailer.createTransport({
+if (process.env.NODE_ENV === "production") {
+  secrets = process.env;
+} else {
+  secrets = require("./secrets.json");
+}
+
+transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSWORD
+    user: secrets.EMAIL,
+    pass: secrets.PASSWORD
   }
 });
 
