@@ -101,7 +101,7 @@ export default function() {
                 offset={-60}
                 className="nav-link text-white text-uppercase"
               >
-                Location
+                Contact
               </Link>
             ) : (
               <Link
@@ -111,7 +111,7 @@ export default function() {
                 offset={-275}
                 className="nav-link text-white text-uppercase"
               >
-                Location
+                Contact
               </Link>
             )}
           </Nav>
