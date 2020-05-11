@@ -1,4 +1,4 @@
-// require("dotenv").config();
+require("dotenv").config();
 
 const { createServer } = require("http");
 const express = require("express");
@@ -13,13 +13,13 @@ const PORT = normalizePort(process.env.PORT || 5000);
 let transporter;
 const app = express();
 const dev = app.get("env") !== "production";
-let secrets;
-
-if (process.env.NODE_ENV === "production") {
-  secrets = process.env;
-} else {
-  secrets = require("./secrets.json");
-}
+// let secrets;
+//
+// if (process.env.NODE_ENV === "production") {
+//   secrets = process.env;
+// } else {
+//   secrets = require("./secrets.json");
+// }
 
 if (!dev) {
   app.disable("x-powered-by");
@@ -36,8 +36,8 @@ if (!dev) {
     transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL || secrets.EMAIL,
-        pass: process.env.PASSWORD || secrets.PASSWORD
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD
       }
     });
     if (req.body.phone) {
