@@ -18,7 +18,7 @@ const app = express();
 const dev = app.get("env") !== "production";
 
 if (!dev) {
-  // app.disable("x-powered-by");
+  app.disable("x-powered-by");
   app.use(compression());
   app.use(express.json());
   app.use(morgan("common"));
@@ -52,7 +52,6 @@ if (!dev) {
           res.json({ success: false });
         });
     } else {
-      secrets = require("./secrets.json");
       await ses
         .sendEmail("adirdayan@gmail.com", name, message, email, phone)
         .then(() => {
@@ -72,6 +71,7 @@ if (!dev) {
 
 if (dev) {
   app.use(morgan("dev"));
+  secrets = require("./secrets.json");
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "build", "index.html"));
   });
