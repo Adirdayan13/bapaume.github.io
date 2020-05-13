@@ -35,22 +35,23 @@ class Map extends React.Component {
     const content = this.state.message;
 
     fetch(
-      `https://bapaumee.herokuapp.com/sendemail.php?name=${name}&email=${email}&content=${content}`
+      `https://bapaumee.herokuapp.com/send.php?name=${name}&email=${email}&content=${content}`
     )
-      .then(({ data }) => {
-        if (data.success) {
-          animateScroll.scrollToBottom({
-            containerId: "mailSent"
-          });
-          this.setState({ success: true, loading: false });
-        } else {
-          animateScroll.scrollToBottom({
-            containerId: "mailFail"
-          });
-          this.setState({ success: false, loading: false });
-        }
-      })
-      .catch(err => console.log("err in handleSubmit: ", err));
+      .then(data => console.log("data: ", data))
+      .catch(err => console.log("err: ", err));
+    //   if (data.success) {
+    //     animateScroll.scrollToBottom({
+    //       containerId: "mailSent"
+    //     });
+    //     this.setState({ success: true, loading: false });
+    //   } else {
+    //     animateScroll.scrollToBottom({
+    //       containerId: "mailFail"
+    //     });
+    //     this.setState({ success: false, loading: false });
+    //   }
+    // })
+    // .catch(err => console.log("err in handleSubmit: ", err));
     // });
 
     // axios
