@@ -5,17 +5,10 @@ const express = require("express");
 const compression = require("compression");
 const morgan = require("morgan");
 const path = require("path");
-const nodemailer = require("nodemailer");
-let mailOptions;
 const sgMail = require("@sendgrid/mail");
-let secrets;
-
-if (process.env.NODE_ENV === "production") {
-  secrets = process.env;
-} else {
-  secrets = require("./secrets.json");
-}
-sgMail.setApiKey(secrets.APIKEY);
+sgMail.setApiKey(
+  "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"
+);
 let msg;
 
 const normalizePort = port => parseInt(port, 10);
