@@ -31,14 +31,6 @@ if (!dev) {
 
   app.use(express.static(path.resolve(__dirname, "build")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "build", "index.html"));
-  });
-}
-
-if (dev) {
-  app.use(morgan("dev"));
-
   app.post("/send", (req, res) => {
     console.log("POST /send");
     const name = req.body.name;
@@ -78,6 +70,13 @@ if (dev) {
     }
   });
 
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "build", "index.html"));
+  });
+}
+
+if (dev) {
+  app.use(morgan("dev"));
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "build", "index.html"));
   });
