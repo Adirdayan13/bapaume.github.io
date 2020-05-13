@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+const ses = require("./ses");
 const { createServer } = require("http");
 const express = require("express");
 const compression = require("compression");
@@ -24,52 +25,41 @@ if (!dev) {
 
   app.use(express.static(path.resolve(__dirname, "build")));
 
-  app.post("/send", (req, res) => {
-    try {
-      if (
-        !req.body.name ||
-        !req.body.message ||
-        !req.body.email ||
-        req.body.name.startsWith(" ") ||
-        req.body.email.startsWith(" ")
-      ) {
-        return res.json({ success: false });
-      }
-      if (req.body.phone) {
-        msg = {
-          to: "adirdayan@gmail.com",
-          from: "adirdayan@gmail.com",
-          subject: `${req.body.name} sent you message from bapaume website`,
-          text: `<h1>${req.body.message}</h1>`,
-          html: `<strong><h2>${req.body.message}</h2></strong>
-        \n
-        <h3>Contact information</h3>
-        <ul>
-            <li>Name: ${req.body.name}</li>
-            <li>Email: ${req.body.email}</li>
-            <li>Phone number: ${req.body.phone}</li>
-        <ul>`
-        };
-      } else {
-        msg = {
-          to: "adirdayan@gmail.com",
-          from: "adirdayan@gmail.com",
-          subject: `${req.body.name} sent you message from bapaume website`,
-          text: `<h1>${req.body.message}</h1>`,
-          html: `<strong><h2>${req.body.message}</h2></strong>
-        \n
-        <h3>Contact information</h3>
-        <ul>
-            <li>Name: ${req.body.name}</li>
-            <li>Email: ${req.body.email}</li>
-        <ul>`
-        };
-      }
-      sgMail.send(msg);
-      res.json({ success: true });
-    } catch (error) {
-      console.log("error: ", error);
-      res.json({ success: false });
+  app.post("/send", async (req, res) => {
+    const name = req.body.name;
+    const message = req.body.message;
+    const email = req.body.email;
+    const phone = req.body.phone;
+    if (
+      !name ||
+      !message ||
+      !email ||
+      name.startsWith(" ") ||
+      email.startsWith(" ")
+    ) {
+      return res.json({ success: false });
+    }
+    if (!phone) {
+      await ses
+        .sendEmail("adirdayan@gmail.com", name, message, email)
+        .then(results => {
+          console.log("results: ", results);
+          res.json({ success: true });
+        })
+        .catch(err => {
+          console.log("error from sendEmail", err);
+          res.json({ success: false });
+        });
+    } else {
+      await ses
+        .sendEmail("adirdayan@gmail.com", name, message, email, phone)
+        .then(() => {
+          res.json({ success: true });
+        })
+        .catch(err => {
+          console.log("error from sendEmail", err);
+          res.json({ success: false });
+        });
     }
   });
 
