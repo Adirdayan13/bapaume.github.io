@@ -18,7 +18,7 @@ const app = express();
 const dev = app.get("env") !== "production";
 
 if (!dev) {
-  // app.disable("x-powered-by");
+  app.disable("x-powered-by");
   app.use(compression());
   app.use(express.json());
   app.use(morgan("common"));
@@ -27,6 +27,7 @@ if (!dev) {
   secrets = process.env;
 
   app.post("/send", async (req, res) => {
+    console.log("POST /send");
     const name = req.body.name;
     const message = req.body.message;
     const email = req.body.email;
