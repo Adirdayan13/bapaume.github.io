@@ -23,30 +23,30 @@ class Map extends React.Component {
     });
   }
 
-  async handleSubmit(e) {
+  handleSubmit(e) {
     this.setState({ loading: true });
     animateScroll.scrollToBottom({
       containerId: "loading"
     });
     e.preventDefault();
-    await axios
+    axios
       .post("/send", {
         name: this.state.name,
         email: this.state.email,
         message: this.state.message,
         phone: this.state.phone
       })
-      .then(async data => {
+      .then(data => {
         if (data.data.success) {
           animateScroll.scrollToBottom({
             containerId: "mailSent"
           });
-          await this.setState({ success: true, loading: false });
+          this.setState({ success: true, loading: false });
         } else {
           animateScroll.scrollToBottom({
             containerId: "mailFail"
           });
-          await this.setState({ success: false, loading: false });
+          this.setState({ success: false, loading: false });
         }
       })
       .catch(err => console.log("err in handleSubmit: ", err));

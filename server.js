@@ -26,7 +26,7 @@ if (!dev) {
   app.use(express.static(path.resolve(__dirname, "build")));
   secrets = process.env;
 
-  app.post("/send", async (req, res) => {
+  app.post("/send", (req, res) => {
     console.log("POST /send");
     const name = req.body.name;
     const message = req.body.message;
@@ -42,7 +42,7 @@ if (!dev) {
       return res.json({ success: false });
     }
     if (!phone) {
-      await ses
+      ses
         .sendEmail("adirdayan@gmail.com", name, message, email)
         .then(results => {
           console.log("results: ", results);
@@ -53,7 +53,7 @@ if (!dev) {
           res.json({ success: false });
         });
     } else {
-      await ses
+      ses
         .sendEmail("adirdayan@gmail.com", name, message, email, phone)
         .then(() => {
           res.json({ success: true });
