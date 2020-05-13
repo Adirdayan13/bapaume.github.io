@@ -6,11 +6,11 @@ const express = require("express");
 const compression = require("compression");
 const morgan = require("morgan");
 const path = require("path");
+let secrets;
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(
   "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"
 );
-let msg;
 
 const normalizePort = port => parseInt(port, 10);
 const PORT = normalizePort(process.env.PORT || 5000);
@@ -24,6 +24,7 @@ if (!dev) {
   app.use(morgan("common"));
 
   app.use(express.static(path.resolve(__dirname, "build")));
+  secrets = process.env;
 
   app.post("/send", async (req, res) => {
     const name = req.body.name;
@@ -51,6 +52,7 @@ if (!dev) {
           res.json({ success: false });
         });
     } else {
+      secrets = require("./secrets.json");
       await ses
         .sendEmail("adirdayan@gmail.com", name, message, email, phone)
         .then(() => {
