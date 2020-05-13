@@ -29,52 +29,30 @@ class Map extends React.Component {
       containerId: "loading"
     });
     e.preventDefault();
-
-    const name = this.state.name;
-    const email = this.state.email;
-    const content = this.state.message;
-
-    fetch(
-      `https://bapaumee.herokuapp.com/send.php?name=${name}&email=${email}&content=${content}`
-    )
-      .then(data => console.log("data: ", data))
-      .catch(err => console.log("err: ", err));
-    //   if (data.success) {
-    //     animateScroll.scrollToBottom({
-    //       containerId: "mailSent"
-    //     });
-    //     this.setState({ success: true, loading: false });
-    //   } else {
-    //     animateScroll.scrollToBottom({
-    //       containerId: "mailFail"
-    //     });
-    //     this.setState({ success: false, loading: false });
-    //   }
-    // })
-    // .catch(err => console.log("err in handleSubmit: ", err));
-    // });
-
-    // axios
-    //   .post("/send", {
-    //     name: this.state.name,
-    //     email: this.state.email,
-    //     message: this.state.message,
-    //     phone: this.state.phone
-    //   })
-    //   .then(({ data }) => {
-    //     if (data.success) {
-    //       animateScroll.scrollToBottom({
-    //         containerId: "mailSent"
-    //       });
-    //       this.setState({ success: true, loading: false });
-    //     } else {
-    //       animateScroll.scrollToBottom({
-    //         containerId: "mailFail"
-    //       });
-    //       this.setState({ success: false, loading: false });
-    //     }
-    //   })
-    //   .catch(err => console.log("err in handleSubmit: ", err));
+    axios
+      .post("/send", {
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message,
+        phone: this.state.phone
+      })
+      .then(({ data }) => {
+        if (data.success) {
+          animateScroll.scrollToBottom({
+            containerId: "mailSent"
+          });
+          this.setState({ success: true, loading: false });
+        } else {
+          animateScroll.scrollToBottom({
+            containerId: "mailFail"
+          });
+          this.setState({ success: false, loading: false });
+        }
+      })
+      .catch(
+        err => console.log("err in handleSubmit: ", err),
+        this.setState({ success: false, loading: false })
+      );
   }
 
   componentDidMount() {
