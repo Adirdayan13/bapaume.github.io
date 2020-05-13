@@ -8,7 +8,14 @@ const path = require("path");
 const nodemailer = require("nodemailer");
 let mailOptions;
 const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(process.env.APIKEY);
+let secrets;
+
+if (process.env.NODE_ENV === "production") {
+  secrets = process.env;
+} else {
+  secrets = require("./secrets.json");
+}
+sgMail.setApiKey(secrets.APIKEY);
 let msg;
 
 const normalizePort = port => parseInt(port, 10);
