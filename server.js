@@ -6,7 +6,6 @@ const express = require("express");
 const compression = require("compression");
 const morgan = require("morgan");
 const path = require("path");
-let secrets;
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(
   "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"
@@ -17,6 +16,13 @@ const PORT = normalizePort(process.env.PORT || 5000);
 const app = express();
 const dev = app.get("env") !== "production";
 
+let secrets;
+if (process.env.NODE_ENV === "production" || app.get("env") === "production") {
+  secrets = process.env;
+} else {
+  secrets = require("./secrets.json");
+}
+
 if (!dev) {
   app.disable("x-powered-by");
   app.use(compression());
@@ -24,7 +30,14 @@ if (!dev) {
   app.use(morgan("common"));
 
   app.use(express.static(path.resolve(__dirname, "build")));
-  secrets = process.env;
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "build", "index.html"));
+  });
+}
+
+if (dev) {
+  app.use(morgan("dev"));
 
   app.post("/send", (req, res) => {
     console.log("POST /send");
@@ -65,14 +78,6 @@ if (!dev) {
     }
   });
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "build", "index.html"));
-  });
-}
-
-if (dev) {
-  app.use(morgan("dev"));
-  secrets = require("./secrets.json");
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "build", "index.html"));
   });
