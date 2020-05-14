@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const ses = require("./ses");
-const { createServer } = require("http");
+const { createServer } = require("https");
 const express = require("express");
 const compression = require("compression");
 const morgan = require("morgan");
@@ -27,12 +27,11 @@ if (!dev) {
   app.disable("x-powered-by");
   app.use(compression());
   app.use(express.json());
-  app.use(morgan("common"));
-
+  // app.use(morgan("common"));
   app.use(express.static(path.resolve(__dirname, "build")));
 
   app.post("/send", (req, res) => {
-    console.log("POST /send");
+    console.log("!DEV POST /send");
     const name = req.body.name;
     const message = req.body.message;
     const email = req.body.email;
@@ -76,7 +75,8 @@ if (!dev) {
 }
 
 if (dev) {
-  app.use(morgan("dev"));
+  // app.use(morgan("dev"));
+
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "build", "index.html"));
   });
