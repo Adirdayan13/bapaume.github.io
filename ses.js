@@ -42,7 +42,7 @@ exports.sendEmail = function(recipient, name, message, senderEmail, phone) {
   } else {
     return ses
       .sendEmail({
-        Source: "Request from my website <adirdayan@gmail.com>",
+        Source: "Bapaume website <adirdayan@gmail.com>",
         Destination: {
           ToAddresses: [recipient]
         },
