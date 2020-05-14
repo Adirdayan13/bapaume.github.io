@@ -31,7 +31,6 @@ if (!dev) {
   app.use(express.static(path.resolve(__dirname, "build")));
 
   app.post("/send", (req, res) => {
-    console.log("!DEV POST /send");
     const name = req.body.name;
     const message = req.body.message;
     const email = req.body.email;
