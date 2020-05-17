@@ -67,7 +67,7 @@ export default class VisiteCarousel extends Component {
               src="https://i.ibb.co/Vmzj9FX/Visite-groupe-d-e-le-ves.jpg"
               className="carousel-img"
             />
-            <h1>Visite groupe d'éléves</h1>
+            <h1>Visite d'un groupe d'élèves</h1>
           </div>
           <div className="slider-div">
             <img
@@ -75,7 +75,7 @@ export default class VisiteCarousel extends Component {
               src="https://i.ibb.co/ZSDgVj6/Visite-journe-e-du-patrimoine.jpg"
               className="carousel-img"
             />
-            <h1>Visite journée du patrimoine</h1>
+            <h1>Journée du patrimoine</h1>
           </div>
           <div className="slider-div">
             <img
@@ -83,7 +83,7 @@ export default class VisiteCarousel extends Component {
               src="https://i.ibb.co/Jc65ZB0/Visite-par-Yves-Lievin.jpg"
               className="carousel-img"
             />
-            <h1>Visite par Yves Lievin</h1>
+            <h1>Yves Lievin, guide</h1>
           </div>
         </Slider>
       </div>

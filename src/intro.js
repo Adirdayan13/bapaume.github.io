@@ -14,13 +14,14 @@ function Intro() {
       >
         <div className="intro-text-div">
           <p>
-            Visite virtuelle du BASTION DU DAUPHIN et du BASTION DE LA REYNE et
-            des BOVES constituant les fortification de la ville. Les bastions
-            ont été construits dans les années 1530. Les Fortifications ont été
-            bâties sous le règne de CHARLES le QUINT (vers 1530). Ils ont été
-            démantelés en août 1847. Ils ont été réouverts à la guerre de 1940
-            pour que la population se mette à l’abri des bombardements. Le
-            Bastion du Dauphin a été ouvert en 2000
+            Visite virtuelle du Bastion du Dauphin et du Bastion de la Reyne et
+            des boves constituant les fortification de la ville de Bapaume. Les
+            bastions ont été construits dans les années 1530. Les Fortifications
+            ont été bâties sous le règne de Charles le Quint. Ils ont été
+            démantelés en août 1847 et ont été réouverts à la guerre de 1940
+            pour que la population bapalmoise se mette à l’abri des
+            bombardements. Le Bastion du Dauphin a été ouvert en 2000 par la
+            Société Archéologique.
           </p>
 
           <img

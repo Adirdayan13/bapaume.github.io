@@ -44,7 +44,7 @@ export default class App extends React.Component {
         </section>
         <section id="gallery">
           <br />
-          <h1 className="section-title">GALLERY</h1>
+          <h1 className="section-title">GALLERIE PHOTOS</h1>
           <br />
           <div
             data-aos="zoom-in"
@@ -73,7 +73,7 @@ export default class App extends React.Component {
                   </Link>
                 </div>
                 <div className="gallery-pic-div">
-                  <h1>Les Bastion</h1>
+                  <h1>Les Bastions</h1>
                   <Link to="gallery-wrapper" duration={1000} offset={-75}>
                     <img
                       src="https://i.ibb.co/mTmdbMS/echele-de-secours-en-1940.jpg"
@@ -89,7 +89,7 @@ export default class App extends React.Component {
                   </Link>
                 </div>
                 <div className="gallery-pic-div">
-                  <h1>Medieval</h1>
+                  <h1>Médiéval</h1>
 
                   <Link to="gallery-wrapper" duration={1000} offset={-75}>
                     <img
@@ -106,7 +106,7 @@ export default class App extends React.Component {
                   </Link>
                 </div>
                 <div className="gallery-pic-div">
-                  <h1>Visite</h1>
+                  <h1>Visites</h1>
 
                   <Link to="gallery-wrapper" duration={1000} offset={-75}>
                     <img
@@ -154,7 +154,7 @@ export default class App extends React.Component {
                   }
                 />
               </div>
-              <h1>Les Taupes</h1>
+              <h1>LES TAUPES</h1>
               <LesTaupesCarousel />
             </>
           )}
@@ -168,7 +168,7 @@ export default class App extends React.Component {
                   onClick={() => this.setState({ visite: false, popup: false })}
                 />
               </div>
-              <h1>visite</h1>
+              <h1>VISITES</h1>
               <VisiteCarousel />
             </>
           )}
@@ -216,7 +216,7 @@ export default class App extends React.Component {
                   }
                 />
               </div>
-              <h1>Medieval</h1>
+              <h1>MEDIEVAL</h1>
               <MedievalCarousel />
             </>
           )}
@@ -224,7 +224,7 @@ export default class App extends React.Component {
 
         <section id="video">
           <br />
-          <h1 className="section-title">VIDEO</h1>
+          <h1 className="section-title">VIDEOS</h1>
           <br />
           <div
             data-aos="zoom-in-up"
@@ -251,7 +251,7 @@ export default class App extends React.Component {
               <br />
               <div className="video">
                 <h1>
-                  Bapaume Mediéval: reconstitution par la Société Archéologique
+                  Bapaume Médiéval: reconstitution par la Société Archéologique
                 </h1>
                 <iframe
                   title="video"
@@ -265,7 +265,7 @@ export default class App extends React.Component {
               </div>
               <br />
               <div className="video">
-                <h1>Exploration Bastion du Brézé</h1>
+                <h1>Exploration de Bastion du Brézé</h1>
                 <iframe
                   title="video"
                   width="100%"
@@ -302,6 +302,18 @@ export default class App extends React.Component {
             data-aos-anchor-placement="top-bottom"
           >
             <Map />
+          </div>
+          <div className="credit">
+            <span>
+              Site contruit par{" "}
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://adir-portfolio.herokuapp.com"
+              >
+                Adir Dayan
+              </a>
+            </span>
           </div>
         </section>
       </>

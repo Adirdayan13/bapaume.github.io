@@ -59,7 +59,7 @@ export default class LesTaupesCarousel extends Component {
               src="https://i.ibb.co/Qn0nG08/Les-taupes-chantier-exterieur.jpg"
               className="carousel-img"
             />
-            <h1>Chantier exterieur</h1>
+            <h1>Chantier extérieur</h1>
           </div>
           <div className="slider-div">
             <img
@@ -91,7 +91,7 @@ export default class LesTaupesCarousel extends Component {
               src="https://i.ibb.co/rZYFCZp/les-Taupes-crop.jpg"
               className="carousel-img"
             />
-            <h1>DESCRIPTION</h1>
+            <h1>Les taupes</h1>
           </div>
         </Slider>
       </div>

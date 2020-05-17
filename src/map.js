@@ -29,33 +29,27 @@ class Map extends React.Component {
       containerId: "loading"
     });
     e.preventDefault();
-    fetch(
-      `https://bapaumee.herokuapp.com/sendemail.php?name=${this.state.name}&email=${this.state.email}&content=${this.state.message}`
-    ).then(results => {
-      console.log("results: ", results);
-    });
-
-    // axios
-    //   .post("/send", {
-    //     name: this.state.name,
-    //     email: this.state.email,
-    //     message: this.state.message,
-    //     phone: this.state.phone
-    //   })
-    //   .then(data => {
-    //     if (data.data.success) {
-    //       animateScroll.scrollToBottom({
-    //         containerId: "mailSent"
-    //       });
-    //       this.setState({ success: true, loading: false });
-    //     } else {
-    //       animateScroll.scrollToBottom({
-    //         containerId: "mailFail"
-    //       });
-    //       this.setState({ success: false, loading: false });
-    //     }
-    //   })
-    //   .catch(err => console.log("err in handleSubmit: ", err));
+    axios
+      .post("/send", {
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message,
+        phone: this.state.phone
+      })
+      .then(data => {
+        if (data.data.success) {
+          animateScroll.scrollToBottom({
+            containerId: "mailSent"
+          });
+          this.setState({ success: true, loading: false });
+        } else {
+          animateScroll.scrollToBottom({
+            containerId: "mailFail"
+          });
+          this.setState({ success: false, loading: false });
+        }
+      })
+      .catch(err => console.log("err in handleSubmit: ", err));
   }
 
   componentDidMount() {
@@ -78,7 +72,9 @@ class Map extends React.Component {
 
     new mapboxgl.Popup({ closeOnClick: false })
       .setLngLat([2.847394, 50.100872])
-      .setHTML("<p>Underground tunnels of bapaume</p>")
+      .setHTML(
+        "<p>Les souterains de Bapaume</p><a target='_blank' href='https://goo.gl/maps/SwJJqZp84HnTmQuJ7'>Ouvrir avec google maps</a>"
+      )
       .addTo(map);
   }
 
@@ -86,7 +82,7 @@ class Map extends React.Component {
     return (
       <>
         <br />
-        <h1 className="section-title">Our location:</h1>
+        <h1 className="section-title">Plan D'accès</h1>
         <br />
 
         <div ref={el => (this.mapContainer = el)} className="mapContainer" />
@@ -100,19 +96,15 @@ class Map extends React.Component {
               style={{ width: "100px" }}
               src="pictures/check.svg"
             />
-            <h1>Mail was send successfuly</h1>
+            <h1>Votre mail a bien été envoyé</h1>
           </div>
         )}
         {!this.state.success && (
           <>
-            <h1>Keep in touch</h1>
-            <form
-              action="sendemail.php"
-              method="POST"
-              onSubmit={e => this.handleSubmit(e)}
-            >
+            <h1>Nous contacter</h1>
+            <form method="POST" onSubmit={e => this.handleSubmit(e)}>
               <div className="form-group">
-                <label htmlFor="fullName">Full Name *</label>
+                <label htmlFor="fullName">Nom et Prénom *</label>
                 <input
                   onChange={e => this.handleChange(e)}
                   autoComplete="off"
@@ -120,12 +112,12 @@ class Map extends React.Component {
                   className="form-control"
                   id="fullName"
                   name="name"
-                  placeholder="Enter your full name"
+                  placeholder="Entrez votre nom et prénom"
                   required
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="emailForm">Email address *</label>
+                <label htmlFor="emailForm">Adresse e-mail *</label>
                 <input
                   onChange={e => this.handleChange(e)}
                   autoComplete="off"
@@ -133,12 +125,12 @@ class Map extends React.Component {
                   type="email"
                   className="form-control"
                   id="emailForm"
-                  placeholder="name@example.com"
+                  placeholder="adresse@exemple.fr"
                   required
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="phoneForm">Phone number</label>
+                <label htmlFor="phoneForm">Numéro de téléphone</label>
                 <input
                   onChange={e => this.handleChange(e)}
                   autoComplete="off"
@@ -146,7 +138,7 @@ class Map extends React.Component {
                   type="text"
                   className="form-control"
                   id="phoneForm"
-                  placeholder="Enter your phone number"
+                  placeholder="Entrez votre numéro de téléphone"
                 />
               </div>
               <div className="form-group">
@@ -158,11 +150,11 @@ class Map extends React.Component {
                   className="form-control"
                   id="message"
                   rows="3"
-                  placeholder="Type your message here"
+                  placeholder="Ecrivez votre message ici"
                   required
                 ></textarea>
                 <p style={{ float: "right", fontSize: "15px" }}>
-                  * - Required fields
+                  * - Champs obligatoires
                 </p>
               </div>
               <div style={{ textAlign: "center", paddingTop: "10%" }}>
@@ -170,7 +162,7 @@ class Map extends React.Component {
                   className="btn-outline-dark btn"
                   style={{ marginBottom: "2%" }}
                 >
-                  Send
+                  Envoyer
                 </button>
               </div>
               {this.state.loading && (
@@ -183,12 +175,29 @@ class Map extends React.Component {
                 </div>
               )}
             </form>
+            <br />
+            <p>Société Archéologique de Bapaume</p>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.facebook.com/archeobap"
+            >
+              <img
+                className="logo"
+                alt="facebook-logo"
+                style={{ width: "30px" }}
+                src="/pictures/facebook.svg"
+              />
+            </a>
           </>
         )}
         {this.state.success === false && (
           <div id="mailFail">
             <br />
-            <h1>Something went wrong, mail was not send, please try again.</h1>
+            <h1>
+              Suite à un problème, votre mail n'a pas pu être envoyé, veuillez
+              réessayer.
+            </h1>
           </div>
         )}
       </>

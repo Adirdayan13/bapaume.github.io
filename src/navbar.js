@@ -59,7 +59,7 @@ export default function() {
                 offset={-60}
                 className="nav-link text-white text-uppercase"
               >
-                Gallery
+                Photos
               </Link>
             ) : (
               <Link
@@ -69,7 +69,7 @@ export default function() {
                 offset={-275}
                 className="nav-link text-white text-uppercase"
               >
-                Gallery
+                Photos
               </Link>
             )}
             {isBrowser ? (
@@ -80,7 +80,7 @@ export default function() {
                 offset={-60}
                 className="nav-link text-white text-uppercase"
               >
-                Video
+                Vidéos
               </Link>
             ) : (
               <Link
@@ -90,7 +90,7 @@ export default function() {
                 offset={-275}
                 className="nav-link text-white text-uppercase"
               >
-                Video
+                Vidéos
               </Link>
             )}
             {isBrowser ? (

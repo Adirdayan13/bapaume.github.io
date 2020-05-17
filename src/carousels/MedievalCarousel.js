@@ -43,7 +43,7 @@ export default class MedievalCarousel extends Component {
               src="https://i.ibb.co/LkZBC9V/Medieval-la-societe-archeologique.jpg"
               className="carousel-img"
             />
-            <h1>La societe archeologique</h1>
+            <h1>La société archéologique</h1>
           </div>
           <div className="slider-div">
             <img
@@ -51,7 +51,7 @@ export default class MedievalCarousel extends Component {
               src="https://i.ibb.co/M6nZqKJ/Medieval-decord-medievals.jpg"
               className="carousel-img"
             />
-            <h1>Decord medievals</h1>
+            <h1>Décors médievaux</h1>
           </div>
           <div className="slider-div">
             <img
@@ -59,7 +59,7 @@ export default class MedievalCarousel extends Component {
               src="https://i.ibb.co/C99BCyv/Medieval-journe-medievals.jpg"
               className="carousel-img"
             />
-            <h1>Journé medievals</h1>
+            <h1>Journée médiévale</h1>
           </div>
           <div className="slider-div">
             <img
@@ -91,7 +91,7 @@ export default class MedievalCarousel extends Component {
               src="https://i.ibb.co/g4Gf637/Medieval-une-meurtriere.jpg"
               className="carousel-img"
             />
-            <h1>Une meurtriere</h1>
+            <h1>Une meurtrière</h1>
           </div>
           <div className="slider-div">
             <img
