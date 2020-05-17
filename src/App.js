@@ -302,18 +302,18 @@ export default class App extends React.Component {
             data-aos-anchor-placement="top-bottom"
           >
             <Map />
-          </div>
-          <div className="credit">
-            <span>
-              Site contruit par{" "}
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://adir-portfolio.herokuapp.com"
-              >
-                Adir Dayan
-              </a>
-            </span>
+            <div className="credit">
+              <span>
+                Site contruit par{" "}
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://adir-portfolio.herokuapp.com"
+                >
+                  Adir Dayan
+                </a>
+              </span>
+            </div>
           </div>
         </section>
       </>

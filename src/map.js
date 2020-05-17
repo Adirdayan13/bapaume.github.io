@@ -176,19 +176,22 @@ class Map extends React.Component {
               )}
             </form>
             <br />
-            <p>Société Archéologique de Bapaume</p>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.facebook.com/archeobap"
-            >
-              <img
-                className="logo"
-                alt="facebook-logo"
-                style={{ width: "30px" }}
-                src="/pictures/facebook.svg"
-              />
-            </a>
+            <div style={{ width: "100%", textAlign: "center" }}>
+              <a
+                style={{ padding: "1%" }}
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/archeobap"
+              >
+                <img
+                  className="logo"
+                  alt="facebook-logo"
+                  style={{ width: "30px" }}
+                  src="/pictures/facebook.svg"
+                />
+              </a>
+              <span>Société Archéologique de Bapaume</span>
+            </div>
           </>
         )}
         {this.state.success === false && (
