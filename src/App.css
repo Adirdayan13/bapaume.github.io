@@ -329,7 +329,7 @@ textarea {
     grid-template-rows: 1050px 1fr !important;
   }
   .credit {
-    justify-content: center;
+    justify-content: center !important;
   }
   form {
     width: 80%;
