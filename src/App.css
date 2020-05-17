@@ -328,6 +328,9 @@ textarea {
     grid-template-columns: 1fr;
     grid-template-rows: 1050px 1fr !important;
   }
+  .credit {
+    justify-content: center;
+  }
   form {
     width: 80%;
   }
