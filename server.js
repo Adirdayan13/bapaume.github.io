@@ -1,6 +1,5 @@
 require("dotenv").config();
 
-const php = require("./sendemail.php");
 const ses = require("./ses");
 const { createServer } = require("http");
 const express = require("express");
@@ -32,47 +31,41 @@ if (!dev) {
   app.use(express.static(path.resolve(__dirname, "build")));
 
   app.post("/send", (req, res) => {
-    fetch(
-      `${php}?name=${req.body.name}&email=${req.body.email}&content=${req.body.message}`
-    ).then(results => {
-      console.log("results: ", results);
-      res.json({ results });
-    });
-    // const name = req.body.name;
-    // const message = req.body.message;
-    // const email = req.body.email;
-    // const phone = req.body.phone;
-    // if (
-    //   !name ||
-    //   !message ||
-    //   !email ||
-    //   name.startsWith(" ") ||
-    //   email.startsWith(" ")
-    // ) {
-    //   return res.json({ success: false });
-    // }
-    // if (!phone) {
-    //   ses
-    //     .sendEmail("adirdayan@gmail.com", name, message, email)
-    //     .then(results => {
-    //       console.log("results: ", results);
-    //       res.json({ success: true });
-    //     })
-    //     .catch(err => {
-    //       console.log("error from sendEmail", err);
-    //       res.json({ success: false });
-    //     });
-    // } else {
-    //   ses
-    //     .sendEmail("adirdayan@gmail.com", name, message, email, phone)
-    //     .then(() => {
-    //       res.json({ success: true });
-    //     })
-    //     .catch(err => {
-    //       console.log("error from sendEmail", err);
-    //       res.json({ success: false });
-    //     });
-    // }
+    const name = req.body.name;
+    const message = req.body.message;
+    const email = req.body.email;
+    const phone = req.body.phone;
+    if (
+      !name ||
+      !message ||
+      !email ||
+      name.startsWith(" ") ||
+      email.startsWith(" ")
+    ) {
+      return res.json({ success: false });
+    }
+    if (!phone) {
+      ses
+        .sendEmail("adirdayan@gmail.com", name, message, email)
+        .then(results => {
+          console.log("results: ", results);
+          res.json({ success: true });
+        })
+        .catch(err => {
+          console.log("error from sendEmail", err);
+          res.json({ success: false });
+        });
+    } else {
+      ses
+        .sendEmail("adirdayan@gmail.com", name, message, email, phone)
+        .then(() => {
+          res.json({ success: true });
+        })
+        .catch(err => {
+          console.log("error from sendEmail", err);
+          res.json({ success: false });
+        });
+    }
   });
 
   app.get("*", (req, res) => {

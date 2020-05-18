@@ -29,7 +29,6 @@ class Map extends React.Component {
       containerId: "loading"
     });
     e.preventDefault();
-
     axios
       .post("/send", {
         name: this.state.name,
@@ -37,24 +36,24 @@ class Map extends React.Component {
         message: this.state.message,
         phone: this.state.phone
       })
-      .then(results => {
-        console.log("results: ", results);
-      });
-
-    //   .then(data => {
-    //     if (data.data.success) {
-    //       animateScroll.scrollToBottom({
-    //         containerId: "mailSent"
-    //       });
-    //       this.setState({ success: true, loading: false });
-    //     } else {
-    //       animateScroll.scrollToBottom({
-    //         containerId: "mailFail"
-    //       });
-    //       this.setState({ success: false, loading: false });
-    //     }
-    //   })
-    //   .catch(err => console.log("err in handleSubmit: ", err));
+      .then(data => {
+        if (data.data.success) {
+          animateScroll.scrollToBottom({
+            containerId: "mailSent"
+          });
+          setTimeout(() => {
+            this.setState({ success: true, loading: false });
+          }, 2000);
+        } else {
+          animateScroll.scrollToBottom({
+            containerId: "mailFail"
+          });
+          setTimeout(() => {
+            this.setState({ success: false, loading: false });
+          }, 2000);
+        }
+      })
+      .catch(err => console.log("err in handleSubmit: ", err));
   }
 
   componentDidMount() {
@@ -78,7 +77,7 @@ class Map extends React.Component {
     new mapboxgl.Popup({ closeOnClick: false })
       .setLngLat([2.847394, 50.100872])
       .setHTML(
-        "<div style={text-align: 'center'}><p>Les souterains de Bapaume</p><a target='_blank' href='https://goo.gl/maps/GWufrWkEVSqVquQe7'>Ouvrir avec google maps</a></div>"
+        "<p>Les souterains de Bapaume</p><a target='_blank' href='https://goo.gl/maps/mSib4E9Be3p5g3Vj6'>Ouvrir avec google maps</a>"
       )
       .addTo(map);
   }
