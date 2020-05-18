@@ -17,7 +17,8 @@ exports.sendEmail = function(recipient, name, message, senderEmail, phone) {
   if (phone === undefined) {
     return ses
       .sendEmail({
-        Source: "Bapaume website <adirdayan@gmail.com>",
+        Source:
+          "souterrains-bapaume.com <ne-pas-repondre@souterrains-bapaume.com>",
         Destination: {
           ToAddresses: [recipient]
         },
@@ -26,15 +27,15 @@ exports.sendEmail = function(recipient, name, message, senderEmail, phone) {
             Html: {
               Charset: "UTF-8",
               Data: `<h1>${message}<h1> \n
-                <h3>Contact information</h3> \n
+                <h3>Contact info</h3> \n
                 <ul>
-                    <li>Send from: ${name}</li>
+                    <li>Envoyé par: ${name}</li>
                     <li>Email: ${senderEmail}</li>
                 </ul>`
             }
           },
           Subject: {
-            Data: `${name} sent you mail from bapaume website`
+            Data: `${name} vous a envoyé un email depuis le site souterrains-bapaume.com`
           }
         }
       })
@@ -42,7 +43,8 @@ exports.sendEmail = function(recipient, name, message, senderEmail, phone) {
   } else {
     return ses
       .sendEmail({
-        Source: "Bapaume website <adirdayan@gmail.com>",
+        Source:
+          "souterrains-bapaume.com <ne-pas-repondre@souterrains-bapaume.com>",
         Destination: {
           ToAddresses: [recipient]
         },
@@ -53,14 +55,14 @@ exports.sendEmail = function(recipient, name, message, senderEmail, phone) {
               Data: `<h1>${message}<h1> \n
                   <h3>Contact information</h3> \n
                   <ul>
-                      <li>Send from: ${name}</li>
+                      <li>Envoyé par: ${name}</li>
                       <li>Email: ${senderEmail}</li>
-                      <li>Phone: ${phone}</li>
+                      <li>Téléphone: ${phone}</li>
                   </ul>`
             }
           },
           Subject: {
-            Data: `${name} sent you mail from bapaume website`
+            Data: `${name} vous a envoyé un email depuis le site souterrains-bapaume.com`
           }
         }
       })

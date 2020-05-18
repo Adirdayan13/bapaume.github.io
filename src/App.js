@@ -308,7 +308,7 @@ export default class App extends React.Component {
                 <a
                   rel="noopener noreferrer"
                   target="_blank"
-                  href="https://adir-portfolio.herokuapp.com"
+                  href="https://adir-portfolio.herokuapp.com/?bapaume"
                 >
                   Adir Dayan
                 </a>

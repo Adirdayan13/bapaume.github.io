@@ -162,12 +162,14 @@ class Map extends React.Component {
                 </p>
               </div>
               <div style={{ textAlign: "center", paddingTop: "10%" }}>
-                <button
-                  className="btn-outline-dark btn"
-                  style={{ marginBottom: "2%" }}
-                >
-                  Envoyer
-                </button>
+                {!this.state.loading && (
+                  <button
+                    className="btn-outline-dark btn"
+                    style={{ marginBottom: "2%" }}
+                  >
+                    Envoyer
+                  </button>
+                )}
               </div>
               {this.state.loading && (
                 <div id="loading" style={{ textAlign: "center" }}>
