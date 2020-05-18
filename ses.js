@@ -17,8 +17,7 @@ exports.sendEmail = function(recipient, name, message, senderEmail, phone) {
   if (phone === undefined) {
     return ses
       .sendEmail({
-        Source:
-          "souterrains-bapaume.com <ne-pas-repondre@souterrains-bapaume.com>",
+        Source: "souterrains-bapaume.com <adirdayan@gmail.com>",
         Destination: {
           ToAddresses: [recipient]
         },
@@ -43,8 +42,7 @@ exports.sendEmail = function(recipient, name, message, senderEmail, phone) {
   } else {
     return ses
       .sendEmail({
-        Source:
-          "souterrains-bapaume.com <ne-pas-repondre@souterrains-bapaume.com>",
+        Source: "souterrains-bapaume.com <adirdayan@gmail.com>",
         Destination: {
           ToAddresses: [recipient]
         },
