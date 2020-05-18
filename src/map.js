@@ -29,18 +29,18 @@ class Map extends React.Component {
       containerId: "loading"
     });
     e.preventDefault();
-    fetch(
-      `https://bapaumee.herokuapp.com/sendemail.php?name=${this.state.name}&email=${this.state.email}&content=${this.state.message}`
-    ).then(results => {
-      console.log("results: ", results);
-    });
-    // axios
-    //   .post("/send", {
-    //     name: this.state.name,
-    //     email: this.state.email,
-    //     message: this.state.message,
-    //     phone: this.state.phone
-    //   })
+
+    axios
+      .post("/send", {
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message,
+        phone: this.state.phone
+      })
+      .then(results => {
+        console.log("results: ", results);
+      });
+
     //   .then(data => {
     //     if (data.data.success) {
     //       animateScroll.scrollToBottom({
@@ -78,7 +78,7 @@ class Map extends React.Component {
     new mapboxgl.Popup({ closeOnClick: false })
       .setLngLat([2.847394, 50.100872])
       .setHTML(
-        "<p>Les souterains de Bapaume</p><a target='_blank' href='https://goo.gl/maps/SwJJqZp84HnTmQuJ7'>Ouvrir avec google maps</a>"
+        "<div style={text-align: 'center'}><p>Les souterains de Bapaume</p><a target='_blank' href='https://goo.gl/maps/GWufrWkEVSqVquQe7'>Ouvrir avec google maps</a></div>"
       )
       .addTo(map);
   }
