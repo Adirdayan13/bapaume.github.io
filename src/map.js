@@ -29,27 +29,32 @@ class Map extends React.Component {
       containerId: "loading"
     });
     e.preventDefault();
-    axios
-      .post("/send", {
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message,
-        phone: this.state.phone
-      })
-      .then(data => {
-        if (data.data.success) {
-          animateScroll.scrollToBottom({
-            containerId: "mailSent"
-          });
-          this.setState({ success: true, loading: false });
-        } else {
-          animateScroll.scrollToBottom({
-            containerId: "mailFail"
-          });
-          this.setState({ success: false, loading: false });
-        }
-      })
-      .catch(err => console.log("err in handleSubmit: ", err));
+    fetch(
+      `https://bapaumee.herokuapp.com/sendemail.php?name=${this.state.name}&email=${this.state.email}&content=${this.state.message}`
+    ).then(results => {
+      console.log("results: ", results);
+    });
+    // axios
+    //   .post("/send", {
+    //     name: this.state.name,
+    //     email: this.state.email,
+    //     message: this.state.message,
+    //     phone: this.state.phone
+    //   })
+    //   .then(data => {
+    //     if (data.data.success) {
+    //       animateScroll.scrollToBottom({
+    //         containerId: "mailSent"
+    //       });
+    //       this.setState({ success: true, loading: false });
+    //     } else {
+    //       animateScroll.scrollToBottom({
+    //         containerId: "mailFail"
+    //       });
+    //       this.setState({ success: false, loading: false });
+    //     }
+    //   })
+    //   .catch(err => console.log("err in handleSubmit: ", err));
   }
 
   componentDidMount() {
