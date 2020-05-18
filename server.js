@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const php = require("./sendmail.php");
+const php = require("./sendemail.php");
 const ses = require("./ses");
 const { createServer } = require("http");
 const express = require("express");
