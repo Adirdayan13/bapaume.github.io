@@ -28,9 +28,10 @@ exports.sendEmail = function(recipient, name, message, senderEmail, phone) {
               Data: `<h1>${message}<h1> \n
                 <h3>Contact info</h3> \n
                 <ul>
-                    <li>Envoyé par: ${name}</li>
-                    <li>Email: ${senderEmail}</li>
-                </ul>`
+                    <li><h3>Envoyé par: ${name}</h3></li>
+                    <li><h3>Email: ${senderEmail}</h3></li>
+                </ul> \n
+                Ne répondez pas à cet e-mail, répondez à l'e-mail à partir des coordonnées.`
             }
           },
           Subject: {
@@ -53,10 +54,11 @@ exports.sendEmail = function(recipient, name, message, senderEmail, phone) {
               Data: `<h1>${message}<h1> \n
                   <h3>Contact information</h3> \n
                   <ul>
-                      <li>Envoyé par: ${name}</li>
-                      <li>Email: ${senderEmail}</li>
-                      <li>Téléphone: ${phone}</li>
-                  </ul>`
+                      <li><h3>Envoyé par: ${name}</h3></li>
+                      <li><h3>Email: ${senderEmail}</h3></li>
+                      <li><h3>Téléphone: ${phone}</h3></li>
+                  </ul> \n
+                  Ne répondez pas à cet e-mail, répondez à l'e-mail à partir des coordonnées.`
             }
           },
           Subject: {
