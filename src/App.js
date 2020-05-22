@@ -145,78 +145,88 @@ export default class App extends React.Component {
           {this.state.lesTaupes && (
             <>
               <div className="x-div">
-                <img
-                  className="x"
-                  alt="x"
-                  src="/pictures/interface.svg"
+                <button
+                  className="x btn btn-outline-dark btn-sm"
                   onClick={() =>
                     this.setState({ lesTaupes: false, popup: false })
                   }
-                />
+                >
+                  Retour à la galerie
+                </button>
               </div>
-              <h1>LES TAUPES</h1>
+              <div className="carousel-h1">
+                <h1>LES TAUPES</h1>
+              </div>
               <LesTaupesCarousel />
             </>
           )}
           {this.state.visite && (
             <>
               <div className="x-div">
-                <img
-                  className="x"
-                  alt="x"
-                  src="/pictures/interface.svg"
+                <button
+                  className="x btn btn-outline-dark btn-sm"
                   onClick={() => this.setState({ visite: false, popup: false })}
-                />
+                >
+                  Retour à la galerie
+                </button>
               </div>
-              <h1>VISITES</h1>
+              <div className="carousel-h1">
+                <h1>VISITES</h1>
+              </div>
               <VisiteCarousel />
             </>
           )}
           {this.state.lesBastion && (
             <>
               <div className="x-div">
-                <img
-                  className="x"
-                  alt="x"
-                  src="/pictures/interface.svg"
+                <button
+                  className="x btn btn-outline-dark btn-sm"
                   onClick={() =>
                     this.setState({ lesBastion: false, popup: false })
                   }
-                />
+                >
+                  Retour à la galerie
+                </button>
               </div>
-              <h1>LES BASTIONS</h1>
+              <div className="carousel-h1">
+                <h1>LES BASTIONS</h1>
+              </div>
               <LesBastionCarousel />
             </>
           )}
           {this.state.lesBoves && (
             <>
               <div className="x-div">
-                <img
-                  className="x"
-                  alt="x"
-                  src="/pictures/interface.svg"
+                <button
+                  className="x btn btn-outline-dark btn-sm"
                   onClick={() =>
                     this.setState({ lesBoves: false, popup: false })
                   }
-                />
+                >
+                  Retour à la galerie
+                </button>
               </div>
-              <h1>LES BOVES</h1>
+              <div className="carousel-h1">
+                <h1>LES BOVES</h1>
+              </div>
               <LesBovesCarousel />
             </>
           )}
           {this.state.medieval && (
             <>
               <div className="x-div">
-                <img
-                  className="x"
-                  alt="x"
-                  src="/pictures/interface.svg"
+                <button
+                  className="x btn btn-outline-dark btn-sm"
                   onClick={() =>
                     this.setState({ medieval: false, popup: false })
                   }
-                />
+                >
+                  Retour à la galerie
+                </button>
               </div>
-              <h1>MEDIEVAL</h1>
+              <div className="carousel-h1">
+                <h1>MEDIEVAL</h1>
+              </div>
               <MedievalCarousel />
             </>
           )}

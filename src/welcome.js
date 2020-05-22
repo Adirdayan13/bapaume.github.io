@@ -4,7 +4,7 @@ function Welcome() {
   return (
     <>
       <div
-        className="welcome-img-div container-fluid"
+        className="welcome-img-div  container-fluid"
         data-aos="flip-up"
         data-aos-duration="1500"
         data-aos-easing="ease"

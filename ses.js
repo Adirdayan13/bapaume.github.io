@@ -31,7 +31,7 @@ exports.sendEmail = function(recipient, name, message, senderEmail, phone) {
                     <li><h3>Envoyé par: ${name}</h3></li>
                     <li><h3>Email: ${senderEmail}</h3></li>
                 </ul> \n
-                Ne répondez pas à cet e-mail, répondez à l'e-mail à partir des coordonnées.`
+                <h4>Ne répondez pas à cet e-mail, répondez à l'e-mail à partir des coordonnées.<h4>`
             }
           },
           Subject: {
@@ -58,7 +58,7 @@ exports.sendEmail = function(recipient, name, message, senderEmail, phone) {
                       <li><h3>Email: ${senderEmail}</h3></li>
                       <li><h3>Téléphone: ${phone}</h3></li>
                   </ul> \n
-                  Ne répondez pas à cet e-mail, répondez à l'e-mail à partir des coordonnées.`
+                  <h4>Ne répondez pas à cet e-mail, répondez à l'e-mail à partir des coordonnées.</h4>`
             }
           },
           Subject: {
