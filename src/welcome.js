@@ -13,8 +13,7 @@ function Welcome() {
         <br />
         <br />
         <h1>
-          Découvrez les souterrains de Bapaume avec la société archéologique
-          bapalmoise.
+          Découvrez les souterrains avec la Société Archéologique et Historique de Bapaume
         </h1>
         <br />
         <div className="welcome-img-wrapper">

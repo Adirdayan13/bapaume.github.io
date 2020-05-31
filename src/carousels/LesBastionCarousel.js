@@ -43,7 +43,7 @@ export default class LesBastionCarousel extends Component {
               src="https://i.ibb.co/mTmdbMS/echele-de-secours-en-1940.jpg"
               className="carousel-img"
             />
-            <h1>Echelle de secours en 1940</h1>
+            <h3>Echelle de secours dans le bastion de la Reyne</h3>
           </div>
           <div className="slider-div">
             <img
@@ -51,7 +51,7 @@ export default class LesBastionCarousel extends Component {
               src="https://i.ibb.co/x5qMVNX/Bastion-galerie-de-contre-mine.png"
               className="carousel-img"
             />
-            <h1>Galerie de contre mine</h1>
+            <h3>Galerie de contre-mine dans le bastion du Dauphin</h3>
           </div>
           <div className="slider-div">
             <img
@@ -59,7 +59,7 @@ export default class LesBastionCarousel extends Component {
               src="https://i.ibb.co/dBYbZP3/Bastion-exte-rieur-du-Bastion.jpg"
               className="carousel-img"
             />
-            <h1>Entrée exterieure</h1>
+            <h3>Extérieur du bastion du Dauphin</h3>
           </div>
           <div className="slider-div">
             <img
@@ -67,7 +67,7 @@ export default class LesBastionCarousel extends Component {
               src="https://i.ibb.co/x8msgT8/rameau-de-fusillade.jpg"
               className="carousel-img"
             />
-            <h1>Rameau de fusillade</h1>
+            <h3>Extérieur du bastion du Dauphin</h3>
           </div>
           <div className="slider-div">
             <img
@@ -75,7 +75,7 @@ export default class LesBastionCarousel extends Component {
               src="https://i.ibb.co/fdXTT4k/Bastions-Plans-des-Bastions.jpg"
               className="carousel-img"
             />
-            <h1>Plans des bastions</h1>
+            <h3>Plan des bastions</h3>
           </div>
           <div className="slider-div">
             <img
@@ -83,7 +83,7 @@ export default class LesBastionCarousel extends Component {
               src="https://i.ibb.co/frxfv1c/entre-e-a-droite-de-1940.jpg"
               className="carousel-img"
             />
-            <h1>Entrée à droite de 1940</h1>
+            <h3>Entrée à droite en 1940 du bastion de la Reyne</h3>
           </div>
           <div className="slider-div">
             <img
@@ -91,7 +91,7 @@ export default class LesBastionCarousel extends Component {
               src="https://i.ibb.co/09DnFYC/Rameau-qui-date-de-la-visite-de-Charles-Quint-Copie.jpg"
               className="carousel-img"
             />
-            <h1>Rameau qui date de la visite de Charles Quint</h1>
+            <h3>Rameau commémoratif de la visite de Charles Quint en 1551 au bastion de la Reyne</h3>
           </div>
           <div className="slider-div">
             <img
@@ -99,7 +99,7 @@ export default class LesBastionCarousel extends Component {
               src="https://i.ibb.co/5k9dXCy/1er-salle-du-bastion-de-la-Reyne.jpg"
               className="carousel-img"
             />
-            <h1>1ère salle du bastion de la Reyne</h1>
+            <h3>1ère salle du bastion de la Reyne</h3>
           </div>
           <div className="slider-div">
             <img
@@ -107,7 +107,7 @@ export default class LesBastionCarousel extends Component {
               src="https://i.ibb.co/fdRGQwb/2er-salle.jpg"
               className="carousel-img"
             />
-            <h1>2ème salle</h1>
+            <h3>2ème salle</h3>
           </div>
         </Slider>
       </div>

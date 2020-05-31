@@ -44,7 +44,7 @@ export default class App extends React.Component {
         </section>
         <section id="gallery">
           <br />
-          <h1 className="section-title">GALLERIE PHOTOS</h1>
+          <h1 className="section-title">GALERIE PHOTOS</h1>
           <br />
           <div
             data-aos="zoom-in"
@@ -58,7 +58,7 @@ export default class App extends React.Component {
               <>
                 <div className="gallery-pic-div">
                   <h1>Les Boves</h1>
-                  <Link to="gallery-wrapper" duration={1000} offset={-80}>
+                  <Link to="gallery-wrapper" duration={1000} offset={-55}>
                     <img
                       onClick={() =>
                         this.setState({
@@ -74,7 +74,7 @@ export default class App extends React.Component {
                 </div>
                 <div className="gallery-pic-div">
                   <h1>Les Bastions</h1>
-                  <Link to="gallery-wrapper" duration={1000} offset={-75}>
+                  <Link to="gallery-wrapper" duration={1000} offset={-55}>
                     <img
                       src="https://i.ibb.co/mTmdbMS/echele-de-secours-en-1940.jpg"
                       className="gallery-pic"
@@ -91,7 +91,7 @@ export default class App extends React.Component {
                 <div className="gallery-pic-div">
                   <h1>Médiéval</h1>
 
-                  <Link to="gallery-wrapper" duration={1000} offset={-75}>
+                  <Link to="gallery-wrapper" duration={1000} offset={-55}>
                     <img
                       src="https://i.ibb.co/LkZBC9V/Medieval-la-societe-archeologique.jpg"
                       className="gallery-pic"
@@ -108,7 +108,7 @@ export default class App extends React.Component {
                 <div className="gallery-pic-div">
                   <h1>Visites</h1>
 
-                  <Link to="gallery-wrapper" duration={1000} offset={-75}>
+                  <Link to="gallery-wrapper" duration={1000} offset={-55}>
                     <img
                       src="https://i.ibb.co/LkXfGmC/visite-explication-de-la-citerne.jpg"
                       className="gallery-pic"
@@ -125,7 +125,7 @@ export default class App extends React.Component {
                 <div className="gallery-pic-div">
                   <h1>Les taupes</h1>
 
-                  <Link to="gallery-wrapper" duration={1000} offset={-75}>
+                  <Link to="gallery-wrapper" duration={1000} offset={-55}>
                     <img
                       src="https://i.ibb.co/RNSCWjX/les-taupes-en-recherche.jpgLesBastionCarousel"
                       className="gallery-pic"
@@ -246,8 +246,7 @@ export default class App extends React.Component {
             <div className="videos">
               <br />
               <div className="video">
-                <h1>Visite du baston du Dauphin</h1>
-
+                <h1>Visite du Bastion du Dauphin</h1>
                 <iframe
                   title="video"
                   width="100%"

@@ -43,7 +43,7 @@ export default class LesBovesCarousel extends Component {
               src="/pictures/image17.jpg"
               className="carousel-img"
             />
-            <h1>Graffitis de solats</h1>
+            <h3>Graffitis des soldats</h3>
           </div>
           <div className="slider-div">
             <img
@@ -51,7 +51,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/GRZdKmY/039.jpg"
               className="carousel-img"
             />
-            <h1>Graffitis de solats</h1>
+            <h3>Graffitis des soldats</h3>
           </div>
           <div className="slider-div">
             <img
@@ -59,7 +59,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/CwKBKTR/040.jpg"
               className="carousel-img"
             />
-            <h1>Graffitis de solats</h1>
+            <h3>Graffitis des soldats</h3>
           </div>
           <div className="slider-div">
             <img
@@ -67,7 +67,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/Fb6pjvX/038.jpg"
               className="carousel-img"
             />
-            <h1>NONAME</h1>
+            <h3>Boves</h3>
           </div>
           <div className="slider-div">
             <img
@@ -75,7 +75,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/HpwLYzt/011.jpg"
               className="carousel-img"
             />
-            <h1>NONAME</h1>
+            <h3>Boves</h3>
           </div>
           <div className="slider-div">
             <img
@@ -83,7 +83,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/zmGhK39/047.jpg"
               className="carousel-img"
             />
-            <h1>Visite des boves</h1>
+            <h3>Visite des boves</h3>
           </div>
           <div className="slider-div">
             <img
@@ -91,7 +91,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/KL1c32g/048.jpg"
               className="carousel-img"
             />
-            <h1>Visite des boves</h1>
+            <h3>Visite des boves</h3>
           </div>
           <div className="slider-div">
             <img
@@ -99,7 +99,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/4RCq83t/Entre-e-des-boves.jpg"
               className="carousel-img"
             />
-            <h1>Entrée des boves</h1>
+            <h3>Entrée des boves</h3>
           </div>
           <div className="slider-div">
             <img
@@ -107,7 +107,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/mRv2wpd/Escalier.jpg"
               className="carousel-img"
             />
-            <h1>Escalier</h1>
+            <h3>Escalier</h3>
           </div>
           <div className="slider-div">
             <img
@@ -115,7 +115,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/Q99yQMv/Escalier-2.jpg"
               className="carousel-img"
             />
-            <h1>Escalier 2</h1>
+            <h3>Escalier de 2° niveau</h3>
           </div>
           <div className="slider-div">
             <img
@@ -123,7 +123,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/8cGFH15/Escalier-3.jpg"
               className="carousel-img"
             />
-            <h1>Escalier 3</h1>
+            <h3>Escalier principal</h3>
           </div>
           <div className="slider-div">
             <img
@@ -131,7 +131,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/3ctjsmF/Les-boves.jpg"
               className="carousel-img"
             />
-            <h1>Les boves avant la réhabilitation</h1>
+            <h3>Les boves avant la réhabilitation</h3>
           </div>
           <div className="slider-div">
             <img
@@ -139,7 +139,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/y4b89NP/pepere6.jpg"
               className="carousel-img"
             />
-            <h1>Vestiges</h1>
+            <h3>Vestiges</h3>
           </div>
           <div className="slider-div">
             <img
@@ -147,7 +147,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/0Qn4t5t/Re-habilitation-des-boves-2.jpg"
               className="carousel-img"
             />
-            <h1>Réhabilitation des boves</h1>
+            <h3>Réhabilitation des boves</h3>
           </div>
           <div className="slider-div">
             <img
@@ -155,7 +155,7 @@ export default class LesBovesCarousel extends Component {
               src="https://i.ibb.co/pjbfY24/Re-habilitation-des-boves.jpg"
               className="carousel-img"
             />
-            <h1>Réhabilitation des boves</h1>
+            <h3>Réhabilitation des boves</h3>
           </div>
         </Slider>
       </div>

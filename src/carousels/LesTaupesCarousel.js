@@ -43,7 +43,7 @@ export default class LesTaupesCarousel extends Component {
               src="https://i.ibb.co/RNSCWjX/les-taupes-en-recherche.jpg"
               className="carousel-img"
             />
-            <h1>En recherche</h1>
+            <h3>Groupe des "taupes"</h3>
           </div>
           <div className="slider-div">
             <img
@@ -51,7 +51,7 @@ export default class LesTaupesCarousel extends Component {
               src="https://i.ibb.co/nqyr63Q/Les-taupes-en-recherche.jpg"
               className="carousel-img"
             />
-            <h1>En recherche</h1>
+            <h3>Nettoyage du bastion du Dauphin</h3>
           </div>
           <div className="slider-div">
             <img
@@ -59,7 +59,7 @@ export default class LesTaupesCarousel extends Component {
               src="https://i.ibb.co/Qn0nG08/Les-taupes-chantier-exterieur.jpg"
               className="carousel-img"
             />
-            <h1>Chantier extérieur</h1>
+            <h3>Découverte d’un créneau de fusillade</h3>
           </div>
           <div className="slider-div">
             <img
@@ -67,7 +67,7 @@ export default class LesTaupesCarousel extends Component {
               src="https://i.ibb.co/9wS31qK/Les-taupes-avec-les-jeunes-recrues.jpg"
               className="carousel-img"
             />
-            <h1>Avec les jeunes recrues</h1>
+            <h3>Avec les jeunes recrues</h3>
           </div>
           <div className="slider-div">
             <img
@@ -75,7 +75,7 @@ export default class LesTaupesCarousel extends Component {
               src="https://i.ibb.co/3mtDnv4/les-taupes-au-travail.jpg"
               className="carousel-img"
             />
-            <h1>Au travail</h1>
+            <h3>Remise en état</h3>
           </div>
           <div className="slider-div">
             <img
@@ -83,7 +83,7 @@ export default class LesTaupesCarousel extends Component {
               src="https://i.ibb.co/mqP2vs3/Les-taupes-les-Guides.jpg"
               className="carousel-img"
             />
-            <h1>Les guides</h1>
+            <h3>Les guides</h3>
           </div>
           <div className="slider-div">
             <img
@@ -91,7 +91,7 @@ export default class LesTaupesCarousel extends Component {
               src="https://i.ibb.co/rZYFCZp/les-Taupes-crop.jpg"
               className="carousel-img"
             />
-            <h1>Les taupes</h1>
+            <h3>Les taupes</h3>
           </div>
         </Slider>
       </div>
