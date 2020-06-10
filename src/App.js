@@ -55,7 +55,7 @@ export default class App extends React.Component {
             id="gallery-wrapper"
           >
             {!this.state.popup && (
-              <>
+              <React.Fragment>
                 <div className="gallery-pic-div">
                   <h1>Les Boves</h1>
                   <Link to="gallery-wrapper" duration={1000} offset={-55}>
@@ -139,11 +139,11 @@ export default class App extends React.Component {
                     />
                   </Link>
                 </div>
-              </>
+              </React.Fragment>
             )}
           </div>
           {this.state.lesTaupes && (
-            <>
+            <React.Fragment>
               <div className="x-div">
                 <button
                   className="x btn btn-outline-dark btn-sm"
@@ -158,10 +158,10 @@ export default class App extends React.Component {
                 <h1>LES TAUPES</h1>
               </div>
               <LesTaupesCarousel />
-            </>
+            </React.Fragment>
           )}
           {this.state.visite && (
-            <>
+            <React.Fragment>
               <div className="x-div">
                 <button
                   className="x btn btn-outline-dark btn-sm"
@@ -174,10 +174,10 @@ export default class App extends React.Component {
                 <h1>VISITES</h1>
               </div>
               <VisiteCarousel />
-            </>
+            </React.Fragment>
           )}
           {this.state.lesBastion && (
-            <>
+            <React.Fragment>
               <div className="x-div">
                 <button
                   className="x btn btn-outline-dark btn-sm"
@@ -192,10 +192,10 @@ export default class App extends React.Component {
                 <h1>LES BASTIONS</h1>
               </div>
               <LesBastionCarousel />
-            </>
+            </React.Fragment>
           )}
           {this.state.lesBoves && (
-            <>
+            <React.Fragment>
               <div className="x-div">
                 <button
                   className="x btn btn-outline-dark btn-sm"
@@ -210,10 +210,10 @@ export default class App extends React.Component {
                 <h1>LES BOVES</h1>
               </div>
               <LesBovesCarousel />
-            </>
+            </React.Fragment>
           )}
           {this.state.medieval && (
-            <>
+            <React.Fragment>
               <div className="x-div">
                 <button
                   className="x btn btn-outline-dark btn-sm"
@@ -228,7 +228,7 @@ export default class App extends React.Component {
                 <h1>MEDIEVAL</h1>
               </div>
               <MedievalCarousel />
-            </>
+            </React.Fragment>
           )}
         </section>
 

@@ -23,37 +23,26 @@ class Map extends React.Component {
     });
   }
 
-  handleSubmit(e) {
+  async handleSubmit(e) {
     this.setState({ loading: true });
     animateScroll.scrollToBottom({
       containerId: "loading"
     });
     e.preventDefault();
-    axios
-      .post("/send", {
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message,
-        phone: this.state.phone
-      })
-      .then(data => {
-        if (data.data.success) {
-          animateScroll.scrollToBottom({
-            containerId: "mailSent"
-          });
-          setTimeout(() => {
-            this.setState({ success: true, loading: false });
-          }, 2000);
-        } else {
-          animateScroll.scrollToBottom({
-            containerId: "mailFail"
-          });
-          setTimeout(() => {
-            this.setState({ success: false, loading: false });
-          }, 2000);
-        }
-      })
-      .catch(err => console.log("err in handleSubmit: ", err));
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+    try {
+      await axios.post('https://b3v2tzun4d.execute-api.us-east-1.amazonaws.com/prod/', { name: this.state.name, email: this.state.email, phone: this.state.phone, message: this.state.message })
+      setTimeout(() => {
+        this.setState({ success: true, loading: false });
+      }, 2000);
+    } catch (err) {
+      console.log("err in send email:", err)
+      setTimeout(() => {
+        this.setState({ success: false, loading: false });
+      }, 2000);
+    }
   }
 
   componentDidMount() {
