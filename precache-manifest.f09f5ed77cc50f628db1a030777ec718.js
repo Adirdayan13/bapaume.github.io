@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4875081a885eb63d121e11d329a524a4",
+    "revision": "8f2caca1c70404f446c6222ae758d993",
     "url": "/bapaume/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bapaume/static/css/2.b0a38356.chunk.css"
   },
   {
-    "revision": "09a5a53db0e8233088e9",
+    "revision": "d5d32fb763379cb2065e",
     "url": "/bapaume/static/css/main.cdea43c6.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bapaume/static/js/2.f4f011ee.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "09a5a53db0e8233088e9",
-    "url": "/bapaume/static/js/main.500eaca9.chunk.js"
+    "revision": "d5d32fb763379cb2065e",
+    "url": "/bapaume/static/js/main.d1e4117f.chunk.js"
   },
   {
     "revision": "f855b025ea0939fb96b0",
