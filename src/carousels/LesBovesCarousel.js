@@ -40,7 +40,7 @@ export default class LesBovesCarousel extends Component {
           <div className="slider-div">
             <img
               alt="carousel"
-              src="/pictures/image17.jpg"
+              src="https://i.ibb.co/N9R5Vn0/image17.jpg"
               className="carousel-img"
             />
             <h3>Graffitis des soldats</h3>

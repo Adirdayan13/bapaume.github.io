@@ -87,7 +87,7 @@ class Map extends React.Component {
             <img
               alt="success"
               style={{ width: "100px" }}
-              src="pictures/check.svg"
+              src="https://raw.githubusercontent.com/Adirdayan13/bapaume/gh-pages/pictures/check.svg"
             />
             <h1>Votre mail a bien été envoyé</h1>
           </div>
@@ -163,7 +163,7 @@ class Map extends React.Component {
               {this.state.loading && (
                 <div id="loading" style={{ textAlign: "center" }}>
                   <img
-                    src="/pictures/loading.svg"
+                    src="https://raw.githubusercontent.com/Adirdayan13/bapaume/gh-pages/pictures/loading.svg"
                     alt="loading"
                     style={{ width: "50px" }}
                   />
@@ -182,7 +182,7 @@ class Map extends React.Component {
                   className="logo"
                   alt="facebook-logo"
                   style={{ width: "30px" }}
-                  src="/pictures/facebook.svg"
+                  src="https://raw.githubusercontent.com/Adirdayan13/bapaume/gh-pages/pictures/facebook.svg"
                 />
               </a>
               <span>Société Archéologique de Bapaume</span>
@@ -204,14 +204,3 @@ class Map extends React.Component {
 }
 
 export default Map;
-
-// <div className="email">
-// <h1>Stay in touch</h1>
-// <input name="fullname" placeholder="Enter your full name" />
-// <br />
-// <input name="email" placeholder="Enter your email addres" />
-// <br />
-// <textarea placeholder="Type your message here"></textarea>
-// <br />
-// <button>Send</button>
-// </div>

@@ -66,7 +66,7 @@ export default class App extends React.Component {
                           popup: true
                         })
                       }
-                      src="/pictures/image17.jpg"
+                      src="https://i.ibb.co/N9R5Vn0/image17.jpg"
                       className="gallery-pic"
                       alt="gallery"
                     />

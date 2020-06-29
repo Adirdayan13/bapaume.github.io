@@ -27,7 +27,7 @@ function Intro() {
           <img
             alt="intro"
             className="intro-img"
-            src="/pictures/Bapaume-XVIII.jpg"
+            src="https://github.com/Adirdayan13/bapaume/raw/gh-pages/pictures/Bapaume-XVIII.jpg"
           />
         </div>
       </div>
