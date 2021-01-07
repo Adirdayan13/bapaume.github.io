@@ -1,14 +1,10 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Nav } from "react-bootstrap";
-import { Link, animateScroll as scroll } from "react-scroll";
-import { isBrowser } from "react-device-detect";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav } from 'react-bootstrap';
+import { Link, animateScroll as scroll } from 'react-scroll';
+import { isBrowser } from 'react-device-detect';
 
-function scrollToTop() {
-  scroll.scrollToTop();
-}
-
-export default function() {
+export default function navBar() {
   return (
     <>
       <Navbar
@@ -23,97 +19,51 @@ export default function() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="m-auto">
             <Link
-              smooth={true}
+              to="/accueil"
+              smooth
               duration={1000}
               className="nav-link text-white text-uppercase"
-              onClick={scrollToTop}
+              onClick={() => scroll.scrollToTop()}
             >
               Accueil
             </Link>
-            {isBrowser ? (
-              <Link
-                to="intro"
-                smooth={true}
-                duration={1000}
-                offset={-60}
-                className="nav-link text-white text-uppercase"
-              >
-                À propos
-              </Link>
-            ) : (
-              <Link
-                to="intro"
-                smooth={true}
-                duration={1000}
-                offset={-275}
-                className="nav-link text-white text-uppercase"
-              >
-                À propos
-              </Link>
-            )}
-            {isBrowser ? (
-              <Link
-                to="gallery"
-                smooth={true}
-                duration={1000}
-                offset={-60}
-                className="nav-link text-white text-uppercase"
-              >
-                Photos
-              </Link>
-            ) : (
-              <Link
-                to="gallery"
-                smooth={true}
-                duration={1000}
-                offset={-275}
-                className="nav-link text-white text-uppercase"
-              >
-                Photos
-              </Link>
-            )}
-            {isBrowser ? (
-              <Link
-                to="video"
-                smooth={true}
-                duration={1000}
-                offset={-60}
-                className="nav-link text-white text-uppercase"
-              >
-                Vidéos
-              </Link>
-            ) : (
-              <Link
-                to="video"
-                smooth={true}
-                duration={1000}
-                offset={-275}
-                className="nav-link text-white text-uppercase"
-              >
-                Vidéos
-              </Link>
-            )}
-            {isBrowser ? (
-              <Link
-                to="map"
-                smooth={true}
-                duration={1000}
-                offset={-60}
-                className="nav-link text-white text-uppercase"
-              >
-                Contact
-              </Link>
-            ) : (
-              <Link
-                to="map"
-                smooth={true}
-                duration={1000}
-                offset={-275}
-                className="nav-link text-white text-uppercase"
-              >
-                Contact
-              </Link>
-            )}
+            <Link
+              to="intro"
+              smooth
+              duration={1000}
+              offset={isBrowser ? -60 : -275}
+              className="nav-link text-white text-uppercase"
+            >
+              À propos
+            </Link>
+            <Link
+              to="gallery"
+              smooth
+              duration={1000}
+              offset={isBrowser ? -60 : -275}
+              className="nav-link text-white text-uppercase"
+            >
+              Photos
+            </Link>
+
+            <Link
+              to="video"
+              smooth
+              duration={1000}
+              offset={isBrowser ? -60 : -275}
+              className="nav-link text-white text-uppercase"
+            >
+              Vidéos
+            </Link>
+            <Link
+              to="map"
+              smooth
+              duration={1000}
+              offset={isBrowser ? -60 : -275}
+              className="nav-link text-white text-uppercase"
+            >
+              Contact
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
