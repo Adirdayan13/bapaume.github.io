@@ -14,7 +14,7 @@ function Welcome() {
           Découvrez les souterrains avec la Société Archéologique et Historique de Bapaume
         </h1>
         <div className="row justify-content-center">
-          <div className="col-lg-8 col-md-12 col-sm-12">
+          <div className="col-12">
             <img
               alt="welcome"
               className="welcome-img"
