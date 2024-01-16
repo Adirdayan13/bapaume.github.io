@@ -1,4 +1,4 @@
-const medievalData = [
+const medieval = [
     { link: 'pictures/cover/medieval.jpg', description: 'La société archéologique' },
     { link: 'pictures/medieval/1.jpg', description: 'Décors médievaux' },
     { link: 'pictures/medieval/2.jpg', description: 'Journée médiévale' },
@@ -9,7 +9,7 @@ const medievalData = [
     { link: 'pictures/medieval/7.jpg', description: 'Reconstitution du souterrain' }
 ];
 
-const visiteData = [
+const visite = [
     { link: 'pictures/cover/visite.jpg', description: 'Explication de la fontaine' },
     { link: 'pictures/visite/1.jpg', description: 'Visite du souterrain' },
     { link: 'pictures/visite/2.jpg', description: 'Visite du souterrain' },
@@ -18,7 +18,7 @@ const visiteData = [
     { link: 'pictures/visite/5.jpg', description: 'Yves Lievin, guide' },
 ];
 
-const lesTaupesData = [
+const lesTaupes = [
     { link: 'pictures/cover/les-taupes.jpg', description: 'Groupe des "taupes' },
     { link: 'pictures/les-taupes/1.jpg', description: 'Nettoyage du bastion du Dauphin' },
     { link: 'pictures/les-taupes/2.jpg', description: 'Découverte d’un créneau de fusillade' },
@@ -28,7 +28,7 @@ const lesTaupesData = [
     { link: 'pictures/les-taupes/6.jpg', description: "Les taupes" },
 ];
 
-const lesBovesData = [
+const lesBoves = [
     { link: 'pictures/cover/les-boves.jpg', description: 'Graffitis des soldats' },
     { link: 'pictures/les-boves/1.jpg', description: 'Graffitis des soldats' },
     { link: 'pictures/les-boves/2.jpg', description: 'Graffitis des soldats' },
@@ -46,7 +46,7 @@ const lesBovesData = [
     { link: 'pictures/les-boves/14.jpg', description: 'Réhabilitation des boves' },
 ];
 
-const lesBastionData = [
+const lesBastion = [
     { link: 'pictures/cover/les-bastion.jpg', description: 'Echelle de secours dans le bastion de la Reyne' },
     { link: 'pictures/les-bastion/1.png', description: 'Galerie de contre-mine dans le bastion du Dauphin' },
     { link: 'pictures/les-bastion/2.jpg', description: 'Extérieur du bastion du Dauphin' },
@@ -58,4 +58,10 @@ const lesBastionData = [
     { link: 'pictures/les-bastion/8.jpg', description: '2ème salle' },
 ];
 
-export { medievalData, visiteData, lesTaupesData, lesBovesData, lesBastionData };
+export const galleryData = {
+    medieval,
+    visite,
+    lesTaupes,
+    lesBoves,
+    lesBastion
+}
